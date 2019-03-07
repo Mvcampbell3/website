@@ -1,0 +1,109 @@
+.m{
+    -webkit-clip-path: polygon(0% 100%, 0% 0%, 23% 0%, 47% 37%, 76% 0, 94% 0, 100% 100%, 75% 100%, 71% 50%, 47% 78%, 23% 51%, 24% 99%);
+    clip-path: polygon(0% 100%, 0% 0%, 23% 0%, 47% 37%, 76% 0, 94% 0, 100% 100%, 75% 100%, 71% 50%, 47% 78%, 23% 51%, 24% 99%);
+}
+
+.i{
+    -webkit-clip-path: polygon(33% 100%, 34% 47%, 64% 21%, 49% 5%, 35% 21%, 62% 45%, 61% 100%);
+    clip-path: polygon(33% 100%, 34% 47%, 64% 21%, 49% 5%, 35% 21%, 62% 45%, 61% 100%);
+}
+
+.c{
+    -webkit-clip-path: polygon(81% 100%, 25% 100%, 12% 70%, 18% 39%, 86% 29%, 76% 43%, 61% 48%, 39% 47%, 28% 67%, 33% 81%, 68% 85%, 78% 78%);
+    clip-path: polygon(81% 100%, 25% 100%, 12% 70%, 18% 39%, 86% 29%, 76% 43%, 61% 48%, 39% 47%, 28% 67%, 33% 81%, 68% 85%, 78% 78%);
+}
+
+.h{
+    -webkit-clip-path: polygon(0 100%, 0% 0%, 21% 0%, 18% 65%, 56% 60%, 87% 100%, 64% 100%, 45% 81%, 24% 82%, 20% 100%);
+    clip-path: polygon(0 100%, 0% 0%, 21% 0%, 18% 65%, 56% 60%, 87% 100%, 64% 100%, 45% 81%, 24% 82%, 20% 100%);
+}
+
+.a{
+    -webkit-clip-path: polygon(33% 81%, 63% 81%, 49% 48%, 50% 15%, 100% 100%, 0 100%, 50% 16%, 51% 48%);
+    clip-path: polygon(33% 81%, 63% 81%, 49% 48%, 50% 15%, 100% 100%, 0 100%, 50% 16%, 51% 48%);
+}
+
+.e{
+    -webkit-clip-path: polygon(21% 49%, 44% 70%, 17% 81%, 83% 100%, 0 100%, 0 21%, 69% 48%);
+    clip-path: polygon(21% 49%, 44% 70%, 17% 81%, 83% 100%, 0 100%, 0 21%, 69% 48%);
+}
+
+.l{
+    -webkit-clip-path: polygon(0 0, 26% 2%, 29% 100%, 0% 100%);
+    clip-path: polygon(0 0, 26% 2%, 29% 100%, 0% 100%);
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    overflow: hidden;
+    
+}
+
+.bg{
+    -webkit-clip-path: polygon(100% 0, 74% 100%, 30% 50%, 35% 100%, 66% 50%, 0 100%, 19% 0);
+    clip-path: polygon(100% 0, 74% 100%, 30% 50%, 35% 100%, 66% 50%, 0 100%, 19% 0);
+    height:100vh;
+    width: 100vw;
+    background-color: #444;
+}
+
+.area{
+    position: relative;
+    width: fit-content;
+    top: 100px;
+    left: calc(50vw - 350px);
+    
+}
+
+.letter{
+    height: 100px;
+    width: 100px;
+    background-color: deepskyblue;
+}
+
+.letterBox{
+    position: absolute;
+    display: flex;
+}
+
+.backBox{
+    top: 6px;
+    left: 6px;
+}
+
+.back{
+    background-color: black;
+    position: relative;
+    z-index: 3;
+}
+
+.front{
+    position: relative;
+    z-index: 4;
+}
+
+.shadowFlip{
+    animation-name: shadFlip;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+
+@keyframes shadFlip {
+    0%, 100% {top:6px;left:6px}
+    50% {top:6px; left:-6px};
+}
+
+.fall{
+    animation-name: fallOff;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+
+@keyframes fallOff{
+    0% {top:6px;left:6px}
+    100% {top: 3000px; left: 6px};
+}

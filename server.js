@@ -6,7 +6,7 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 7000;
 
 
 app.get("/", (req, res) => {
@@ -14,5 +14,5 @@ app.get("/", (req, res) => {
 })
 
 app.listen(PORT, ()=> {
-    console.log("Server is live at http://localhost:8080");
+    console.log("Server is live at http://localhost:7000");
 })
