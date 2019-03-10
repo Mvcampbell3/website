@@ -3,9 +3,21 @@
     clip-path: polygon(0% 100%, 0% 0%, 23% 0%, 47% 37%, 76% 0, 94% 0, 100% 100%, 75% 100%, 71% 50%, 47% 78%, 23% 51%, 24% 99%);
 }
 
+.lastC{
+    -webkit-clip-path: polygon(3% 96%, 3% 61%, 2% 21%, 4% 3%, 86% 2%, 90% 19%, 27% 21%, 20% 81%, 52% 73%, 86% 68%, 98% 93%, 45% 97%);
+    clip-path: polygon(3% 96%, 3% 61%, 2% 21%, 4% 3%, 86% 2%, 90% 19%, 27% 21%, 20% 81%, 52% 73%, 86% 68%, 98% 93%, 45% 97%);
+    /* transition: all, .8s; */
+}
+
 .i{
-    -webkit-clip-path: polygon(33% 100%, 34% 47%, 64% 21%, 49% 5%, 35% 21%, 62% 45%, 61% 100%);
-    clip-path: polygon(33% 100%, 34% 47%, 64% 21%, 49% 5%, 35% 21%, 62% 45%, 61% 100%);
+    -webkit-clip-path: polygon(26% 100%, 27% 73%, 28% 47%, 61% 28%, 48% 14%, 34% 28%, 65% 47%, 70% 100%);
+    clip-path: polygon(26% 100%, 27% 73%, 28% 47%, 61% 28%, 48% 14%, 34% 28%, 65% 47%, 70% 100%);
+}
+
+.lastA{
+    -webkit-clip-path: polygon(33% 81%, 63% 81%, 49% 48%, 50% 15%, 100% 100%, 0 100%, 50% 16%, 51% 48%);
+    clip-path: polygon(33% 81%, 63% 81%, 49% 48%, 50% 15%, 100% 100%, 0 100%, 50% 16%, 51% 48%);
+    /* transition: all, .8s; */
 }
 
 .c{
@@ -13,14 +25,33 @@
     clip-path: polygon(81% 100%, 25% 100%, 12% 70%, 18% 39%, 86% 29%, 76% 43%, 61% 48%, 39% 47%, 28% 67%, 33% 81%, 68% 85%, 78% 78%);
 }
 
+.lastM{
+    -webkit-clip-path: polygon(0% 100%, 0% 0%, 23% 0%, 47% 37%, 76% 0, 94% 0, 100% 100%, 75% 100%, 71% 50%, 47% 78%, 23% 51%, 24% 99%);
+    clip-path: polygon(0% 100%, 0% 0%, 23% 0%, 47% 37%, 76% 0, 94% 0, 100% 100%, 75% 100%, 71% 50%, 47% 78%, 23% 51%, 24% 99%);
+    /* transition: all, .8s; */
+}
+
+
 .h{
-    -webkit-clip-path: polygon(0 100%, 0% 0%, 21% 0%, 18% 65%, 56% 60%, 87% 100%, 64% 100%, 45% 81%, 24% 82%, 20% 100%);
-    clip-path: polygon(0 100%, 0% 0%, 21% 0%, 18% 65%, 56% 60%, 87% 100%, 64% 100%, 45% 81%, 24% 82%, 20% 100%);
+    -webkit-clip-path: polygon(3% 97%, 1% 3%, 20% 2%, 22% 62%, 72% 59%, 98% 99%, 73% 98%, 60% 77%, 25% 76%, 25% 96%, 13% 96%);
+    clip-path: polygon(3% 97%, 1% 3%, 20% 2%, 22% 62%, 72% 59%, 98% 99%, 73% 98%, 60% 77%, 25% 76%, 25% 96%, 13% 96%);
+}
+
+.lastP{
+    -webkit-clip-path: polygon(19% 100%, 12% 0, 88% 1%, 86% 14%, 24% 11%, 50% 35%, 87% 8%, 83% 38%, 29% 50%, 39% 79%, 54% 100%);
+    clip-path: polygon(19% 100%, 12% 0, 88% 1%, 86% 14%, 24% 11%, 50% 35%, 87% 8%, 83% 38%, 29% 50%, 39% 79%, 54% 100%);
+    /* transition: all, .8s; */
 }
 
 .a{
-    -webkit-clip-path: polygon(33% 81%, 63% 81%, 49% 48%, 50% 15%, 100% 100%, 0 100%, 50% 16%, 51% 48%);
-    clip-path: polygon(33% 81%, 63% 81%, 49% 48%, 50% 15%, 100% 100%, 0 100%, 50% 16%, 51% 48%);
+    -webkit-clip-path: polygon(6% 31%, 24% 4%, 72% 7%, 67% 28%, 40% 15%, 19% 33%, 58% 38%, 72% 7%, 81% 36%, 89% 91%, 72% 94%, 62% 57%, 26% 55%, 28% 94%, 11% 93%);
+    clip-path: polygon(6% 31%, 24% 4%, 72% 7%, 67% 28%, 40% 15%, 19% 33%, 58% 38%, 72% 7%, 81% 36%, 89% 91%, 72% 94%, 62% 57%, 26% 55%, 28% 94%, 11% 93%);
+}
+
+.lastB{
+    -webkit-clip-path: polygon(12% 59%, 10% 5%, 66% 10%, 54% 28%, 18% 15%, 26% 45%, 60% 19%, 42% 47%, 68% 54%, 80% 89%, 15% 94%, 61% 74%, 31% 59%, 33% 87%, 15% 94%);
+    clip-path: polygon(12% 59%, 10% 5%, 66% 10%, 54% 28%, 18% 15%, 26% 45%, 60% 19%, 42% 47%, 68% 54%, 80% 89%, 15% 94%, 61% 74%, 31% 59%, 33% 87%, 15% 94%);
+    /* transition: all, .8s; */
 }
 
 .e{
@@ -29,8 +60,14 @@
 }
 
 .l{
-    -webkit-clip-path: polygon(0 0, 26% 2%, 29% 100%, 0% 100%);
-    clip-path: polygon(0 0, 26% 2%, 29% 100%, 0% 100%);
+    -webkit-clip-path: polygon(0 100%, 0 0, 32% 0, 34% 100%, 0 76%, 0 0, 32% 0, 33% 100%);
+    clip-path: polygon(0 100%, 0 0, 32% 0, 34% 100%, 0 76%, 0 0, 32% 0, 33% 100%);
+}
+
+.lastL{
+    -webkit-clip-path: polygon(0 100%, 0 0, 32% 0, 34% 100%, 68% 100%, 69% 0%, 100% 0, 100% 100%);
+    clip-path: polygon(0 100%, 0 0, 32% 0, 34% 100%, 68% 100%, 69% 0%, 100% 0, 100% 100%);
+    /* transition: all, .8s; */
 }
 
 body{
@@ -54,6 +91,7 @@ body{
     width: fit-content;
     top: 100px;
     left: calc(50vw - 350px);
+    cursor: pointer;
     
 }
 
@@ -73,6 +111,11 @@ body{
     left: 6px;
 }
 
+.transition-1{
+    transition: all, 1.2s;
+    transition-timing-function: ease-in;
+}
+
 .back{
     background-color: black;
     position: relative;
@@ -84,26 +127,15 @@ body{
     z-index: 4;
 }
 
-.shadowFlip{
-    animation-name: shadFlip;
-    animation-duration: 4s;
-    animation-fill-mode: forwards;
-    animation-timing-function: linear;
-}
-
-@keyframes shadFlip {
-    0%, 100% {top:6px;left:6px}
-    50% {top:6px; left:-6px};
-}
-
 .fall{
     animation-name: fallOff;
-    animation-duration: 2s;
+    animation-duration: 1.650s;
     animation-fill-mode: forwards;
     animation-timing-function: linear;
 }
 
 @keyframes fallOff{
     0% {top:6px;left:6px}
-    100% {top: 3000px; left: 6px};
+    60%{top: 78px; left: 0px}
+    100% {top: 126px; left: -36px};
 }
