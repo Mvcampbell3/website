@@ -6,7 +6,6 @@
 .lastC{
     -webkit-clip-path: polygon(3% 96%, 3% 61%, 2% 21%, 4% 3%, 86% 2%, 90% 19%, 27% 21%, 20% 81%, 52% 73%, 86% 68%, 98% 93%, 45% 97%);
     clip-path: polygon(3% 96%, 3% 61%, 2% 21%, 4% 3%, 86% 2%, 90% 19%, 27% 21%, 20% 81%, 52% 73%, 86% 68%, 98% 93%, 45% 97%);
-    /* transition: all, .8s; */
 }
 
 .i{
@@ -17,7 +16,6 @@
 .lastA{
     -webkit-clip-path: polygon(33% 81%, 63% 81%, 49% 48%, 50% 15%, 100% 100%, 0 100%, 50% 16%, 51% 48%);
     clip-path: polygon(33% 81%, 63% 81%, 49% 48%, 50% 15%, 100% 100%, 0 100%, 50% 16%, 51% 48%);
-    /* transition: all, .8s; */
 }
 
 .c{
@@ -28,7 +26,6 @@
 .lastM{
     -webkit-clip-path: polygon(0% 100%, 0% 0%, 23% 0%, 47% 37%, 76% 0, 94% 0, 100% 100%, 75% 100%, 71% 50%, 47% 78%, 23% 51%, 24% 99%);
     clip-path: polygon(0% 100%, 0% 0%, 23% 0%, 47% 37%, 76% 0, 94% 0, 100% 100%, 75% 100%, 71% 50%, 47% 78%, 23% 51%, 24% 99%);
-    /* transition: all, .8s; */
 }
 
 
@@ -40,7 +37,6 @@
 .lastP{
     -webkit-clip-path: polygon(19% 100%, 12% 0, 88% 1%, 86% 14%, 24% 11%, 50% 35%, 87% 8%, 83% 38%, 29% 50%, 39% 79%, 54% 100%);
     clip-path: polygon(19% 100%, 12% 0, 88% 1%, 86% 14%, 24% 11%, 50% 35%, 87% 8%, 83% 38%, 29% 50%, 39% 79%, 54% 100%);
-    /* transition: all, .8s; */
 }
 
 .a{
@@ -51,7 +47,6 @@
 .lastB{
     -webkit-clip-path: polygon(12% 59%, 10% 5%, 66% 10%, 54% 28%, 18% 15%, 26% 45%, 60% 19%, 42% 47%, 68% 54%, 80% 89%, 15% 94%, 61% 74%, 31% 59%, 33% 87%, 15% 94%);
     clip-path: polygon(12% 59%, 10% 5%, 66% 10%, 54% 28%, 18% 15%, 26% 45%, 60% 19%, 42% 47%, 68% 54%, 80% 89%, 15% 94%, 61% 74%, 31% 59%, 33% 87%, 15% 94%);
-    /* transition: all, .8s; */
 }
 
 .e{
@@ -67,7 +62,6 @@
 .lastL{
     -webkit-clip-path: polygon(0 100%, 0 0, 32% 0, 34% 100%, 68% 100%, 69% 0%, 100% 0, 100% 100%);
     clip-path: polygon(0 100%, 0 0, 32% 0, 34% 100%, 68% 100%, 69% 0%, 100% 0, 100% 100%);
-    /* transition: all, .8s; */
 }
 
 body{
@@ -83,16 +77,17 @@ body{
     clip-path: polygon(100% 0, 74% 100%, 30% 50%, 35% 100%, 66% 50%, 0 100%, 19% 0);
     height:100vh;
     width: 100vw;
+    position: absolute;
+    left: 0;
     background-color: #444;
+    position: relative;
 }
 
 .area{
     position: relative;
     width: fit-content;
     top: 100px;
-    left: 25vw;
-    cursor: pointer;
-    
+    left: 26.5vw;
 }
 
 .letter{
@@ -117,7 +112,7 @@ body{
 }
 
 .back{
-    background-color: black;
+    background-color: #222;
     position: relative;
     z-index: 3;
 }
@@ -134,9 +129,92 @@ body{
     animation-timing-function: linear;
 }
 
+.navBar{
+    z-index: 5;
+    position: fixed;
+    bottom: 30px;
+    display: flex;
+    width: 320px;
+    left: calc(45vw - 150px);
+    justify-content: space-between;
+    box-sizing: border-box;
+    border-top: 3px black solid;
+    border-bottom: 3px black solid;
+    background-color: #444;
+}
+
+.btn{
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', "Geneva", Verdana, sans-serif;
+    padding: 20px 5px;
+    color: deepskyblue;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: #666;
+    color: skyblue;
+}
+
+.aboutSection{
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    left: -120vw;
+    top: 0;
+    background-color: white;
+    box-sizing: border-box;
+    padding: 30px;
+}
+
+
 @keyframes fallOff{
-    0% {top:6px;left:6px}
+    0% {top: 0; left:0}
     60%{top: calc(4vw - 6x); left: 0px}
     100% {top: calc(7vw - 6px); left: -2vw};
 }
 
+
+.right {
+    animation-name: rightMove;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes rightMove{
+    0% {left: 0vw}
+    100% {left: 120vw};
+}
+
+.rightBack{
+    animation-name: rightBack;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes rightBack{
+    0% {left: 120vw}
+    100% {left: 0vw};
+}
+
+.left{
+    animation-name: leftMove;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.leftBack{
+    animation-name: leftBack;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes leftMove{
+    0% {left: -120vw}
+    100% {left: 0vw};
+}
+
+@keyframes leftBack{
+    0% {left: 0vw}
+    100% {left: -120vw};
+}

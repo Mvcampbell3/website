@@ -1,7 +1,6 @@
 $(function () {
 
-
-    $(".area").on("click", function () {
+    setTimeout(function () {
         $(".back").addClass("fall")
         console.log("ran");
         setTimeout(function () {
@@ -11,7 +10,24 @@ $(function () {
             document.getElementById("fourth").className = "letter back fall transition-1 lastP";
             document.getElementById("fifth").className = "letter back fall transition-1 lastB";
             document.getElementById("last").className = "letter back fall transition-1 lastL";
+            document.querySelector(".area").style.cursor = "default";
         }, 450);
+    }, 1000)
+
+
+
+    $(".about").on("click", function () {
+        $(".bg").removeClass("rightBack");
+        $(".bg").addClass("right");
+        $(".aboutSection").addClass("left");
+        $(".aboutSection").removeClass("leftBack");
+    })
+
+    $(".portfolio").on("click", function () {
+        $(".bg").removeClass("right");
+        $(".bg").addClass("rightBack");
+        $(".aboutSection").addClass("leftBack");
+        $(".aboutSection").removeClass("left");
     })
 
 });
