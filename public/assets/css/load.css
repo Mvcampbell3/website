@@ -1,3 +1,9 @@
+
+:root{
+    --letter-size: 6vw;
+}
+
+
 .m{
     -webkit-clip-path: polygon(0% 100%, 0% 0%, 23% 0%, 47% 37%, 76% 0, 94% 0, 100% 100%, 75% 100%, 71% 50%, 47% 78%, 23% 51%, 24% 99%);
     clip-path: polygon(0% 100%, 0% 0%, 23% 0%, 47% 37%, 76% 0, 94% 0, 100% 100%, 75% 100%, 71% 50%, 47% 78%, 23% 51%, 24% 99%);
@@ -91,8 +97,8 @@ body{
 }
 
 .letter{
-    height: 6vw;
-    width: 6vw;
+    height: var(--letter-size);
+    width: var(--letter-size);
     background-color: deepskyblue;
 }
 
@@ -129,92 +135,12 @@ body{
     animation-timing-function: linear;
 }
 
-.navBar{
-    z-index: 5;
-    position: fixed;
-    bottom: 30px;
-    display: flex;
-    width: 320px;
-    left: calc(45vw - 150px);
-    justify-content: space-between;
-    box-sizing: border-box;
-    border-top: 3px black solid;
-    border-bottom: 3px black solid;
-    background-color: #444;
-}
-
-.btn{
-    font-size: 20px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', "Geneva", Verdana, sans-serif;
-    padding: 20px 5px;
-    color: deepskyblue;
-    cursor: pointer;
-}
-
-.btn:hover{
-    background-color: #666;
-    color: skyblue;
-}
-
-.aboutSection{
-    height: 100vh;
-    width: 100vw;
-    position: absolute;
-    left: -120vw;
-    top: 0;
-    background-color: white;
-    box-sizing: border-box;
-    padding: 30px;
-}
 
 
 @keyframes fallOff{
     0% {top: 0; left:0}
     60%{top: calc(4vw - 6x); left: 0px}
-    100% {top: calc(7vw - 6px); left: -2vw};
+    100% {top: calc(var(--letter-size) + 6px); left: -2vw};
 }
 
 
-.right {
-    animation-name: rightMove;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-}
-
-@keyframes rightMove{
-    0% {left: 0vw}
-    100% {left: 120vw};
-}
-
-.rightBack{
-    animation-name: rightBack;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-}
-
-@keyframes rightBack{
-    0% {left: 120vw}
-    100% {left: 0vw};
-}
-
-.left{
-    animation-name: leftMove;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-}
-
-.leftBack{
-    animation-name: leftBack;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-}
-
-@keyframes leftMove{
-    0% {left: -120vw}
-    100% {left: 0vw};
-}
-
-@keyframes leftBack{
-    0% {left: 0vw}
-    100% {left: -120vw};
-}

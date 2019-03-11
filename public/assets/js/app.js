@@ -1,3 +1,5 @@
+let which = 0;
+
 $(function () {
 
     setTimeout(function () {
@@ -21,13 +23,18 @@ $(function () {
         $(".bg").addClass("right");
         $(".aboutSection").addClass("left");
         $(".aboutSection").removeClass("leftBack");
+        which = 1;
     })
 
-    $(".portfolio").on("click", function () {
-        $(".bg").removeClass("right");
-        $(".bg").addClass("rightBack");
-        $(".aboutSection").addClass("leftBack");
-        $(".aboutSection").removeClass("left");
+    $(".home").on("click", function () {
+        if (which === 1) {
+            $(".bg").removeClass("right");
+            $(".bg").addClass("rightBack");
+            $(".aboutSection").addClass("leftBack");
+            $(".aboutSection").removeClass("left");
+            which = 0
+        }
+        
     })
 
 });
