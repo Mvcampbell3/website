@@ -90,14 +90,14 @@ body{
     position: relative;
     width: fit-content;
     top: 100px;
-    left: calc(50vw - 350px);
+    left: 25vw;
     cursor: pointer;
     
 }
 
 .letter{
-    height: 100px;
-    width: 100px;
+    height: 6vw;
+    width: 6vw;
     background-color: deepskyblue;
 }
 
@@ -136,6 +136,7 @@ body{
 
 @keyframes fallOff{
     0% {top:6px;left:6px}
-    60%{top: 78px; left: 0px}
-    100% {top: 126px; left: -36px};
+    60%{top: calc(4vw - 6x); left: 0px}
+    100% {top: calc(7vw - 6px); left: -2vw};
 }
+
