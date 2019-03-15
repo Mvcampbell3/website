@@ -14,12 +14,6 @@ app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "/index.html"));
 })
 
-app.get("/portfolio", (req,res) => {
-    res.sendFile(path.join(__dirname, "/public/portfolio.html"))
-})
-
-
-
 app.listen(PORT, ()=> {
     console.log("Server is live at http://localhost:7000");
 })

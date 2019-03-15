@@ -70,36 +70,27 @@
     clip-path: polygon(0 100%, 0 0, 32% 0, 34% 100%, 68% 100%, 69% 0%, 100% 0, 100% 100%);
 }
 
-body{
-    margin: 0;
-    padding: 0;
-    background-color: #333;
-    overflow: hidden;
-    
-}
-
 .bg{
-    -webkit-clip-path: polygon(100% 0, 74% 100%, 30% 50%, 35% 100%, 66% 50%, 0 100%, 19% 0);
-    clip-path: polygon(100% 0, 74% 100%, 30% 50%, 35% 100%, 66% 50%, 0 100%, 19% 0);
     height:100vh;
     width: 100vw;
     position: absolute;
     left: 0;
-    background-color: #444;
+    /* background: linear-gradient(0deg, black, rgb(00,00,48)); */
     position: relative;
+    z-index: -1;
 }
 
 .area{
     position: relative;
     width: fit-content;
-    top: 100px;
-    left: 26.5vw;
+    top: 150px;
+    left: 29vw;
 }
 
 .letter{
     height: var(--letter-size);
     width: var(--letter-size);
-    background-color: deepskyblue;
+    background-color: rgb(00,00,48);
 }
 
 .letterBox{
@@ -118,7 +109,7 @@ body{
 }
 
 .back{
-    background-color: #222;
+    background-color: #333;
     position: relative;
     z-index: 3;
 }
@@ -135,12 +126,30 @@ body{
     animation-timing-function: linear;
 }
 
-
-
 @keyframes fallOff{
-    0% {top: 0; left:0}
-    60%{top: calc(4vw - 6x); left: 0px}
-    100% {top: calc(var(--letter-size) + 6px); left: -2vw};
+    0% {top: 0; left:0; background-color: #333}
+    60%{top: calc(4vw - 6x); left: 0px;background-color: #333}
+    100% {top: calc(var(--letter-size) + 6px); left: -2vw; background-color: rgb(00,00,48);};
 }
 
+@media (max-width: 600px) {
+    :root{
+        --letter-size: 8vw;
+    }
+
+    .area{
+        left: 22vw;
+    }
+
+    @keyframes fallOff{
+        0% {top: 0; left:0; background-color: #333}
+        60%{top: calc(4vw - 6x); left: 0px;background-color: #333}
+        100% {top: calc(var(--letter-size) + 6px); left: -4vw; background-color: rgb(00,00,48);};
+    }
+
+    .backBox{
+        left: 2px;
+        top: 2px;
+    }
+}
 

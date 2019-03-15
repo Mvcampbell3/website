@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Home</title>
-    <link href="https://fonts.googleapis.com/css?family=Charm:700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/load.css">
     <link rel="stylesheet" href="assets/css/home.css">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <div class="bg">
+    <section id="home" class="bg">
         <div class="area">
             <div class="letterBox">
                 <div class="letter front m"></div>
@@ -38,29 +38,94 @@
 
             </div>
         </div>
-    </div>
+        <p class="aboutContent">
+            <span class="hidden">I am a web development student currently enrolled in the UCF Coding
+                Bootcamp.</span>
+            <span class="hidden">The technologies that I often use in my projects are HTML5, CSS, Javascript, Jquery,
+                Node.js, and Express.</span>
+            <span class="hidden"> I am also comfortable using CSS frameworks such as Bootstrap and Materialize.</span>
+        </p>
+    </section>
 
     <div class="navBar">
-        <div class="btn about">About Me</div>
-        <div class="btn home">Home</div>
-        <div class="btn portfolio"><a href="/portfolio">Portfolio</a></div>
+        <div class="btn home"><a href="#home">Home</a></div>
+        <div class="btn portfolio"><a href="#portfolio">Portfolio</a></div>
+        <div class="btn contact"><a href="#contact">Contact</a></div>
     </div>
 
-    <div class="aboutSection">
-        <h1>About Me</h1>
-        <p class="content">
-            Clipper stern long clothes scurvy heave to Jack Tar topgallant hearties gangplank trysail. Arr hardtack
-            topgallant avast rum bilge water haul wind bounty transom galleon. Doubloon aye nipper tender fore code of
-            conduct loot to go on account jack take a caulk.
+    <div class="container">
+        <section id="portfolio">
+            <div id="projectDisplay" class="projectDisplay">
+                <img src="assets/images/rpsScreen.png" alt="" id="displayPic">
+                <div class="information">
+                    <h3 id="projectName">Rock Paper Scissors</h3>
+                    <p id="projectContent">This is the classic Rock Paper Scissors Game. This is a multiplay game
+                        which utilizes the firebase authentication and database technologies. Simply create a user and
+                        join in on the 2 player fun.</p>
+                    <div class="buttonAreaProject">
+                        <a href="https://mvcampbell3.github.io/RPS-Multiplayer/" target="_blank" class="btnCon"
+                            id="web">Website</a>
+                        <a href="https://github.com/Mvcampbell3/RPS-Multiplayer" target="_blank" class="btnCon"
+                            id="git">GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <div class="" id="projectPage" data-show="projectDisplay">
+                <div class="mainProjects">
+                    <div class="projectBox">
+                        <img id="Pic1" src="assets/images/rpsScreen.png" alt="" class="projectPic" data-which="0"
+                            data-web="true" data-carry="assets/images/rpsScreen.png">
+                        <h3 class="projectTitle">Rock Paper Scissors</h3>
+                    </div>
+                    <div class="projectBox">
+                        <img id="Pic2" src="assets/images/yahtzeeScreen.png" alt="" class="projectPic" data-which="1"
+                            data-web="false" data-carry="assets/images/yahtzeeScreen.png">
+                        <h3 class="projectTitle">Yahtzee</h3>
+                    </div>
+                    <div class="projectBox">
+                        <img id="Pic3" src="assets/images/wordGuess.png" alt="" class="projectPic" data-which="2"
+                            data-web="true" data-carry="assets/images/wordGuess.png">
+                        <h3 class="projectTitle">Word Guess Game</h3>
+                    </div>
+                    <div class="projectBox">
+                        <img id="Pic4" src="assets/images/streetFightS.png" alt="" class="projectPic" data-which="3"
+                            data-web="true" data-carry="assets/images/streetFightS.png">
+                        <h3 class="projectTitle">Street Fighter 2</h3>
+                    </div>
+                    <div class="projectBox">
+                        <img id="Pic5" src="assets/images/html.jpeg" alt="" class="projectPic" data-which="4"
+                            data-web="false" data-carry="assets/images/html.jpeg">
+                        <h3 class="projectTitle">Liri App</h3>
+                    </div>
+                </div>
 
-            Spirits hulk ye Sink me long clothes Shiver me timbers provost bounty stern clipper. Cat o'nine tails
-            interloper brig parley trysail lee Jolly Roger Yellow Jack cackle fruit gabion. Quarterdeck strike colors
-            cackle fruit lanyard sloop fluke careen take a caulk chase gabion.
+            </div>
 
-            Flogging tackle smartly blow the man down boom wherry heave to grog hempen halter draft. Provost Yellow Jack
-            Shiver me timbers loaded to the gunwalls galleon handsomely hempen halter dance the hempen jig booty piracy.
-            Yellow Jack Buccaneer grog gun transom nipperkin jolly boat overhaul matey lugsail.
-        </p>
+        </section>
+        <!-------------- End of project page -------------->
+
+        <section id="contact">
+            <div class="wrapper flex">
+                <div class="formArea">
+                    <div class="inputGroup">
+                        <label class="labelContact" for="name">Name:</label><br>
+                        <input type="text" name="name" id="nameInput"><br>
+                    </div>
+                    <div class="inputGroup">
+                        <label class="labelContact" for="name">Email:</label><br>
+                        <input type="text" name="email" id="emailInput"><br>
+                    </div>
+                    <div class="inputGroup">
+                        <label class="labelContact" for="message">Message:</label><br>
+                        <textarea name="message" id="message" cols="" rows=""></textarea>
+                    </div>
+                    <button class="btnCon subContact">Send</button>
+                </div>
+                <div class="buttonContact">
+
+                </div>
+            </div>
+        </section>
     </div>
 
 
