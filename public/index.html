@@ -41,16 +41,16 @@
         <p class="aboutContent">
             <span class="hidden">I am a web development student currently enrolled in the UCF Coding
                 Bootcamp.</span>
-            <span class="hidden">The technologies that I often use in my projects are HTML5, CSS, Javascript, Jquery,
+            <span class="hidden">Technologies that I often use in my projects are HTML5, CSS, Javascript, Jquery,
                 Node.js, and Express.</span>
             <span class="hidden"> I am also comfortable using CSS frameworks such as Bootstrap and Materialize.</span>
         </p>
     </section>
 
     <div class="navBar">
-        <div class="btn home"><a href="#home">Home</a></div>
-        <div class="btn portfolio"><a href="#portfolio">Portfolio</a></div>
-        <div class="btn contact"><a href="#contact">Contact</a></div>
+        <a href="#home">Home</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
     </div>
 
     <div class="container">
@@ -63,39 +63,34 @@
                         which utilizes the firebase authentication and database technologies. Simply create a user and
                         join in on the 2 player fun.</p>
                     <div class="buttonAreaProject">
-                        <a href="https://mvcampbell3.github.io/RPS-Multiplayer/" target="_blank" class="btnCon"
+                        <a href="https://mvcampbell3.github.io/RPS-Multiplayer/" target="_blank" class="btnPro"
                             id="web">Website</a>
-                        <a href="https://github.com/Mvcampbell3/RPS-Multiplayer" target="_blank" class="btnCon"
+                        <a href="https://github.com/Mvcampbell3/RPS-Multiplayer" target="_blank" class="btnPro"
                             id="git">GitHub</a>
                     </div>
                 </div>
             </div>
-            <div class="" id="projectPage" data-show="projectDisplay">
+            <div class="projectBottom" id="projectPage" data-show="projectDisplay">
                 <div class="mainProjects">
-                    <div class="projectBox">
-                        <img id="Pic1" src="assets/images/rpsScreen.png" alt="" class="projectPic" data-which="0"
-                            data-web="true" data-carry="assets/images/rpsScreen.png">
+                    <div class="projectBox active" data-which="0" data-web="true" data-carry="assets/images/rpsScreen.png">
                         <h3 class="projectTitle">Rock Paper Scissors</h3>
+                        <img id="Pic1" src="assets/images/rpsScreen.png" alt="" class="projectPic">
                     </div>
-                    <div class="projectBox">
-                        <img id="Pic2" src="assets/images/yahtzeeScreen.png" alt="" class="projectPic" data-which="1"
-                            data-web="false" data-carry="assets/images/yahtzeeScreen.png">
+                    <div class="projectBox" data-which="1" data-web="false" data-carry="assets/images/yahtzeeScreen.png">
                         <h3 class="projectTitle">Yahtzee</h3>
+                        <img id="Pic2" src="assets/images/yahtzeeScreen.png" alt="" class="projectPic">
                     </div>
-                    <div class="projectBox">
-                        <img id="Pic3" src="assets/images/wordGuess.png" alt="" class="projectPic" data-which="2"
-                            data-web="true" data-carry="assets/images/wordGuess.png">
-                        <h3 class="projectTitle">Word Guess Game</h3>
+                    <div class="projectBox" data-which="2" data-web="true" data-carry="assets/images/stardewSmall.gif">
+                        <h3 class="projectTitle">Stardew Match Maker</h3>
+                        <img id="Pic3" src="assets/images/stardewPic.png" alt="" class="projectPic">
                     </div>
-                    <div class="projectBox">
-                        <img id="Pic4" src="assets/images/streetFightS.png" alt="" class="projectPic" data-which="3"
-                            data-web="true" data-carry="assets/images/streetFightS.png">
-                        <h3 class="projectTitle">Street Fighter 2</h3>
+                    <div class="projectBox" data-which="3" data-web="true" data-carry="assets/images/burger.gif">
+                        <h3 class="projectTitle">Burger App</h3>
+                        <img id="Pic4" src="assets/images/burgerPic.png" alt="" class="projectPic">
                     </div>
-                    <div class="projectBox">
-                        <img id="Pic5" src="assets/images/html.jpeg" alt="" class="projectPic" data-which="4"
-                            data-web="false" data-carry="assets/images/html.jpeg">
-                        <h3 class="projectTitle">Liri App</h3>
+                    <div class="projectBox" data-which="4" data-web="false" data-carry="assets/images/bamazonLarge.gif">
+                        <h3 class="projectTitle">Bamazon</h3>
+                        <img id="Pic5" src="assets/images/bamazonPic.png" alt="" class="projectPic">
                     </div>
                 </div>
 
@@ -119,7 +114,7 @@
                         <label class="labelContact" for="message">Message:</label><br>
                         <textarea name="message" id="message" cols="" rows=""></textarea>
                     </div>
-                    <button class="btnCon subContact">Send</button>
+                    <button class="subContact">Send</button>
                 </div>
                 <div class="buttonContact">
 

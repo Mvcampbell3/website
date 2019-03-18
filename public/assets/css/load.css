@@ -75,7 +75,6 @@
     width: 100vw;
     position: absolute;
     left: 0;
-    /* background: linear-gradient(0deg, black, rgb(00,00,48)); */
     position: relative;
     z-index: -1;
 }
@@ -90,7 +89,8 @@
 .letter{
     height: var(--letter-size);
     width: var(--letter-size);
-    background-color: rgb(00,00,48);
+    background-color: white;
+
 }
 
 .letterBox{
@@ -109,7 +109,7 @@
 }
 
 .back{
-    background-color: #333;
+    background-color: deepskyblue;
     position: relative;
     z-index: 3;
 }
@@ -127,9 +127,9 @@
 }
 
 @keyframes fallOff{
-    0% {top: 0; left:0; background-color: #333}
-    60%{top: calc(4vw - 6x); left: 0px;background-color: #333}
-    100% {top: calc(var(--letter-size) + 6px); left: -2vw; background-color: rgb(00,00,48);};
+    0% {top: 0; left:0; background-color: deepskyblue}
+    60%{top: calc(4vw - 6x); left: 0px;background-color: deepskyblue}
+    100% {top: calc(var(--letter-size) + 6px); left: -2vw; background-color: white;};
 }
 
 @media (max-width: 600px) {
@@ -142,9 +142,9 @@
     }
 
     @keyframes fallOff{
-        0% {top: 0; left:0; background-color: #333}
-        60%{top: calc(4vw - 6x); left: 0px;background-color: #333}
-        100% {top: calc(var(--letter-size) + 6px); left: -4vw; background-color: rgb(00,00,48);};
+        0% {top: 0; left:0; background-color: deepskyblue}
+        60%{top: calc(4vw - 6x); left: 0px;background-color: deepskyblue}
+        100% {top: calc(var(--letter-size) + 6px); left: -4vw; background-color: white;};
     }
 
     .backBox{

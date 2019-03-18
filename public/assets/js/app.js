@@ -25,7 +25,7 @@ $(function () {
                 500
             );
         }
-    })
+    });
 
     const nameArray = [
         "Rock Paper Scissors",
@@ -36,7 +36,7 @@ $(function () {
     ]
 
     const informationArray = [
-        "This is the classic Rock Paper Scissors Game. This is a multiplay game which utilizes the firebase authentication and database technologies. Simply create a user and join in on the fun.",
+        "This is the classic Rock Paper Scissors Game. This is a multiplay game which utilizes the firebase authentication and database technologies. Simply create a user and join in on the 2 player fun.",
         "This is an ongoing personal project which has its beginnings back when I just started to learn web design. It started as a simple way to learn arrays and is turning into a fully finished game.",
         "This express app is based on the video game Stardew Valley. You take a survey to see which player from the game you should marry. Since there is online multiplayer, you will also be tested against people who have already taken it. Good Luck!",
         "This is an express app that utilizes both express-handlebars and MySql to store burgers into a menu. You can add burgers, devour them, put them back, or delete them. Sound tasty?",
@@ -57,15 +57,14 @@ $(function () {
         "https://github.com/Mvcampbell3/liri-node-app"
     ]
     
-    $(".projectPic").on("click", function() {
+    $(".projectBox").on("click", function() {
+        $(".projectBox").removeClass("active");
+        $(this).addClass("active");
         let whichProject = parseInt($(this).attr("data-which"));
         let web = $(this).attr("data-web");
         $("#displayPic").attr("src", $(this).attr("data-carry"));
         $("#projectName").text(nameArray[whichProject]);
         $("#projectContent").text(informationArray[whichProject]);
-
-        
-
     })
 
     const hiddenArray = [].slice.call(document.querySelectorAll(".hidden"));
