@@ -48,53 +48,134 @@
     </section>
 
     <div class="navBar">
-        <a href="#home">Home</a>
+        <a class="there" href="#home">Home</a>
         <a href="#portfolio">Portfolio</a>
         <a href="#contact">Contact</a>
     </div>
 
     <div class="container">
         <section id="portfolio">
-            <div id="projectDisplay" class="projectDisplay">
-                <img src="assets/images/rpsScreen.png" alt="" id="displayPic">
-                <div class="information">
-                    <h3 id="projectName">Rock Paper Scissors</h3>
-                    <p id="projectContent">This is the classic Rock Paper Scissors Game. This is a multiplay game
-                        which utilizes the firebase authentication and database technologies. Simply create a user and
-                        join in on the 2 player fun.</p>
-                    <div class="buttonAreaProject">
-                        <a href="https://mvcampbell3.github.io/RPS-Multiplayer/" target="_blank" class="btnPro"
-                            id="web">Website</a>
-                        <a href="https://github.com/Mvcampbell3/RPS-Multiplayer" target="_blank" class="btnPro"
-                            id="git">GitHub</a>
+            <div class="regular">
+                <div id="projectDisplay" class="projectDisplay">
+                    <img src="assets/images/rpsScreen.png" alt="" id="displayPic">
+                    <div class="information">
+                        <h3 id="projectName">Rock Paper Scissors</h3>
+                        <p id="projectContent">This is the classic Rock Paper Scissors Game. This is a multiplay game
+                            which utilizes the firebase authentication and database technologies. Simply create a user
+                            and
+                            join in on the 2 player fun.</p>
+                        <div class="buttonAreaProject">
+                            <a href="https://mvcampbell3.github.io/RPS-Multiplayer/" target="_blank" class="btnPro"
+                                id="web">Website</a>
+                            <a href="https://github.com/Mvcampbell3/RPS-Multiplayer" target="_blank" class="btnPro"
+                                id="git">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="projectBottom" id="projectPage" data-show="projectDisplay">
+                    <div class="mainProjects">
+                        <div class="projectBox active" data-which="0" data-web="true"
+                            data-carry="assets/images/rpsScreen.png">
+                            <h3 class="projectTitle">Rock Paper Scissors</h3>
+                            <img id="Pic1" src="assets/images/rpsScreen.png" alt="" class="projectPic">
+                        </div>
+                        <div class="projectBox" data-which="1" data-web="false"
+                            data-carry="assets/images/yahtzeeScreen.png">
+                            <h3 class="projectTitle">Yahtzee</h3>
+                            <img id="Pic2" src="assets/images/yahtzeeScreen.png" alt="" class="projectPic">
+                        </div>
+                        <div class="projectBox" data-which="2" data-web="true"
+                            data-carry="assets/images/stardewSmall.gif">
+                            <h3 class="projectTitle">Stardew Match Maker</h3>
+                            <img id="Pic3" src="assets/images/stardewPic.png" alt="" class="projectPic">
+                        </div>
+                        <div class="projectBox" data-which="3" data-web="true" data-carry="assets/images/burger.gif">
+                            <h3 class="projectTitle">Burger App</h3>
+                            <img id="Pic4" src="assets/images/burgerPic.png" alt="" class="projectPic">
+                        </div>
+                        <div class="projectBox" data-which="4" data-web="false"
+                            data-carry="assets/images/bamazonLarge.gif">
+                            <h3 class="projectTitle">Bamazon</h3>
+                            <img id="Pic5" src="assets/images/bamazonPic.png" alt="" class="projectPic">
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="projectBottom" id="projectPage" data-show="projectDisplay">
-                <div class="mainProjects">
-                    <div class="projectBox active" data-which="0" data-web="true" data-carry="assets/images/rpsScreen.png">
-                        <h3 class="projectTitle">Rock Paper Scissors</h3>
-                        <img id="Pic1" src="assets/images/rpsScreen.png" alt="" class="projectPic">
+            <div class="notRegular">
+                <div class="mobileWrapper">
+                    <div class="mobileProject">
+                        <h3 class="mobileTitle">Rock Paper Scissors</h3>
+                        <img src="assets/images/rpsScreen.png" alt="rock">
+                        <p class="mobileContent">
+                            This is the classic Rock Paper Scissors Game. This is a multiplay game which utilizes the
+                            firebase authentication and database technologies. Simply create a user and join in on the 2
+                            player fun.
+                        </p>
+                        <div class="mobileButtons">
+                            <a href="https://mvcampbell3.github.io/RPS-Multiplayer/" target="_blank" class="btnMob"
+                                id="web">Website</a>
+                            <a href="https://github.com/Mvcampbell3/RPS-Multiplayer" target="_blank"
+                                class="btnMob">GitHub</a>
+                        </div>
                     </div>
-                    <div class="projectBox" data-which="1" data-web="false" data-carry="assets/images/yahtzeeScreen.png">
-                        <h3 class="projectTitle">Yahtzee</h3>
-                        <img id="Pic2" src="assets/images/yahtzeeScreen.png" alt="" class="projectPic">
+                    <div class="mobileProject">
+                        <h3 class="mobileTitle">Yahtzee</h3>
+                        <img src="assets/images/yahtzeeScreen.png" alt="yahtzee">
+                        <p class="mobileContent">
+                            This is an ongoing personal project which has its beginnings back when I just started to
+                            learn web design. It started as a simple way to learn arrays and is turning into a fully
+                            finished game.
+                        </p>
+                        <div class="mobileButtons">
+                            <a href="https://github.com/Mvcampbell3/Yahtzee" target="_blank" class="btnMob">GitHub</a>
+                        </div>
                     </div>
-                    <div class="projectBox" data-which="2" data-web="true" data-carry="assets/images/stardewSmall.gif">
-                        <h3 class="projectTitle">Stardew Match Maker</h3>
-                        <img id="Pic3" src="assets/images/stardewPic.png" alt="" class="projectPic">
+                    <div class="mobileProject">
+                        <h3 class="mobileTitle">Stardew Match Maker</h3>
+                        <img src="assets/images/stardewPic.png" alt="rock">
+                        <p class="mobileContent">
+                            This express app is based on the video game Stardew Valley. You take a survey to see which
+                            player from the game you should marry. Since there is online multiplayer, you will also be
+                            tested against people who have already taken it. Good Luck!"
+                        </p>
+                        <div class="mobileButtons">
+                            <a href="https://secret-temple-27121.herokuapp.com/" target="_blank" class="btnMob"
+                                id="web">Website</a>
+                            <a href="https://github.com/Mvcampbell3/friend_finder" target="_blank"
+                                class="btnMob">Github</a>
+                        </div>
                     </div>
-                    <div class="projectBox" data-which="3" data-web="true" data-carry="assets/images/burger.gif">
-                        <h3 class="projectTitle">Burger App</h3>
-                        <img id="Pic4" src="assets/images/burgerPic.png" alt="" class="projectPic">
+                    <div class="mobileProject">
+                        <h3 class="mobileTitle">Burger App</h3>
+                        <img src="assets/images/burgerPic.png" alt="rock">
+                        <p class="mobileContent">
+                            This is an express app that utilizes both express-handlebars and MySql to store burgers into
+                            a menu. You can add burgers, devour them, put them back, or delete them. Sound tasty?
+                        </p>
+                        <div class="mobileButtons">
+                            <a href="https://burger-app-mvcamp.herokuapp.com/" target="_blank" class="btnMob"
+                                id="web">Website</a>
+                            <a href="https://github.com/Mvcampbell3/burgers" target="_blank" class="btnMob">Github</a>
+                        </div>
                     </div>
-                    <div class="projectBox" data-which="4" data-web="false" data-carry="assets/images/bamazonLarge.gif">
-                        <h3 class="projectTitle">Bamazon</h3>
-                        <img id="Pic5" src="assets/images/bamazonPic.png" alt="" class="projectPic">
+                    <div class="mobileProject">
+                        <h3 class="mobileTitle">Bamazon</h3>
+                        <img src="assets/images/bamazonPic.png" alt="yahtzee">
+                        <p class="mobileContent">
+                            Bamazon is a command line node.js app that simulates the interaction on online shopping.
+                            Customers can purchase items, Managers can purchase more inventory or add new products.
+                            Supervisors can view the financial standings of the departments and even create new
+                            departments.
+                        </p>
+                        <div class="mobileButtons">
+                            <a href="https://github.com/Mvcampbell3/MySQL-Node.js" target="_blank"
+                                class="btnMob">GitHub</a>
+                        </div>
                     </div>
                 </div>
 
             </div>
+
 
         </section>
         <!-------------- End of project page -------------->

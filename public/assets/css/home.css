@@ -41,7 +41,7 @@ body{
     text-decoration: none;
 }
 
-.navBar a:hover{
+.navBar a:hover, .there{
     background-color: white;
     color: black;
 }
@@ -90,6 +90,10 @@ section{
 #portfolio{
     display: flex;
     flex-direction: column;
+}
+
+.regular{
+    height: 100vh;
 }
 
 .projectBox img{
@@ -193,6 +197,56 @@ section{
     z-index: 2;
 }
 
+/* ------------Mobile Portfolio -------------- */
+
+.notRegular{
+    display: none;
+}
+
+.mobileWrapper{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px;
+    text-align: center;
+    color: white;
+}
+
+.mobileProject img{
+    display: block;
+    width: 90%;
+    margin: auto;
+    border: 1px white solid;
+}
+
+.mobileContent{
+    font-size: 18px;
+    font-family: Verdana, 'Geneva', Tahoma, sans-serif;
+    margin-top: 10px;
+}
+
+.mobileButtons{
+    width: 70%;
+    display: flex;
+    margin: 10px auto;
+    justify-content: space-evenly;
+}
+
+.mobileProject{
+    border-bottom: 2px white solid;
+}
+
+.btnMob{
+    display: block;
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+    padding: 15px;
+    background-color: white;
+    color: black;
+    
+}
 /* ----------- Contact Page ----------------- */
 
 .wrapper{
@@ -255,16 +309,34 @@ input[type=text] {
 }
 
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
     .aboutContent{
-        font-size: 5vw;
+        font-size: 3.25vw;
+    }
+
+    .regular{
+        display: none;
+    }
+
+    .notRegular{
+        display: block;
     }
 
     #portfolio{
-        visibility: hidden;
+        overflow-y: scroll;
+    }
+
+    .mainProjects{
+        flex-direction: column;
     }
 
     #contact {
         visibility: hidden;
+    }
+}
+
+@media (max-width: 600px) {
+    .aboutContent{
+        font-size: 5vw;
     }
 }
