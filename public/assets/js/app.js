@@ -55,7 +55,7 @@ $(function() {
     }, 1000)
   }, 1600);
 
-  $(".subContact").on("click", function() {
+  $(".subContact").on("click touchstart", function() {
     let name = $("#nameInput").val().trim();
     let email = $("#emailInput").val().trim();
     let message = $("#message").val().trim();
