@@ -55,7 +55,10 @@ $(function() {
     }, 1000)
   }, 1600);
 
-  $(".subContact").on("click touchstart", function() {
+  $(".subContact").on("click touchstart", function(e) {
+    if (e.type === "touchstart") {
+      $(this).off("click");
+    }
     let name = $("#nameInput").val().trim();
     let email = $("#emailInput").val().trim();
     let message = $("#message").val().trim();
