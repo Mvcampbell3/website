@@ -89,7 +89,7 @@
 .letter{
     height: var(--letter-size);
     width: var(--letter-size);
-    background-color: white;
+    background-color: #000066;
 
 }
 
@@ -109,7 +109,7 @@
 }
 
 .back{
-    background-color: deepskyblue;
+    background-color: #111;
     position: relative;
     z-index: 3;
 }
@@ -127,24 +127,24 @@
 }
 
 @keyframes fallOff{
-    0% {top: 0; left:0; background-color: deepskyblue}
-    60%{top: calc(4vw - 6x); left: 0px;background-color: deepskyblue}
-    100% {top: calc(var(--letter-size) + 6px); left: -2vw; background-color: white;};
+    0% {top: 0; left:0; background-color: #111}
+    60%{top: calc(4vw - 6x); left: 0px;background-color: #111}
+    100% {top: calc(var(--letter-size) + 6px); left: -2vw; background-color: #000066;};
 }
 
 @media (max-width: 600px) {
     :root{
-        --letter-size: 8vw;
+        --letter-size: 10vw;
     }
 
     .area{
-        left: 22vw;
+        left: 20vw;
     }
 
     @keyframes fallOff{
-        0% {top: 0; left:0; background-color: deepskyblue}
-        60%{top: calc(4vw - 6x); left: 0px;background-color: deepskyblue}
-        100% {top: calc(var(--letter-size) + 6px); left: -4vw; background-color: white;};
+        0% {top: 0; left:0; background-color: #111}
+        60%{top: calc(4vw - 6x); left: 0px;background-color: #111}
+        100% {top: calc(var(--letter-size) + 6px); left: -4vw; background-color: #000066;};
     }
 
     .backBox{
