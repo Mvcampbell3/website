@@ -111,7 +111,7 @@ const nameArray = [
 ]
 
 const informationArray = [
-  "This is the classic Rock Paper Scissors Game. This is a multiplay game which utilizes the firebase authentication and database technologies. Simply create a user and join in on the 2 player fun.",
+  "My Final Project for the Bootcamp, we made an application which leveraged the Mars Rover Photos API, which has access to over 500,000 pictures, into a interactive social media hub. Utilizes the MERN stack.",
   "This is an ongoing personal project which has its beginnings back when I just started to learn web design. It started as a simple way to learn arrays and is turning into a fully finished game.",
   "This express app is based on the video game Stardew Valley. You take a survey to see which player from the game you should marry. Since there is online multiplayer, you will also be tested against people who have already taken it. Good Luck!",
   "This is an express app that utilizes both express-handlebars and MySql to store burgers into a menu. You can add burgers, devour them, put them back, or delete them. Sound tasty?",
@@ -119,13 +119,13 @@ const informationArray = [
 ];
 
 const webDestinations = [
-  "https://mvcampbell3.github.io/RPS-Multiplayer/",
+  "https://radiant-mountain-42955.herokuapp.com/",
   "https://secret-temple-27121.herokuapp.com/",
   "https://burger-app-mvcamp.herokuapp.com/"
 ]
 
 const gitDestinations = [
-  "https://github.com/Mvcampbell3/RPS-Multiplayer",
+  "https://github.com/DavidWeid/Space-Pair-Project",
   "https://github.com/Mvcampbell3/Yahtzee",
   "https://github.com/Mvcampbell3/friend_finder",
   "https://github.com/Mvcampbell3/burgers",
