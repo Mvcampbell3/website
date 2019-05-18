@@ -1,8 +1,7 @@
 
 :root{
-    --letter-size: 6vw;
+    --letter-size: 50px;
 }
-
 
 .m{
     -webkit-clip-path: polygon(0% 100%, 0% 0%, 23% 0%, 47% 37%, 76% 0, 94% 0, 100% 100%, 75% 100%, 71% 50%, 47% 78%, 23% 51%, 24% 99%);
@@ -70,37 +69,26 @@
     clip-path: polygon(0 100%, 0 0, 32% 0, 34% 100%, 68% 100%, 69% 0%, 100% 0, 100% 100%);
 }
 
-.bg{
-    height:100vh;
-    width: 100vw;
-    position: absolute;
-    left: 0;
-    position: relative;
-    z-index: -1;
-}
-
 .area{
-    position: relative;
     width: fit-content;
-    top: 150px;
-    left: 29vw;
+    margin: 20px;
 }
 
 .letter{
     height: var(--letter-size);
     width: var(--letter-size);
     background-color: #000066;
-
 }
 
 .letterBox{
-    position: absolute;
+    /* position: absolute; */
     display: flex;
 }
 
 .backBox{
-    top: 6px;
-    left: 6px;
+    position: absolute;
+    top: 63px;
+    left: 23px;
 }
 
 .transition-1{
@@ -123,13 +111,13 @@
     animation-name: fallOff;
     animation-duration: 1.650s;
     animation-fill-mode: forwards;
-    animation-timing-function: linear;
+    animation-timing-function: ease-in-out;
 }
 
 @keyframes fallOff{
     0% {top: 0; left:0; background-color: #111}
-    60%{top: calc(4vw - 6x); left: 0px;background-color: #111}
-    100% {top: calc(var(--letter-size) + 6px); left: -2vw; background-color: #000066;};
+    60%{top: calc(4vw - 3px); left: 0px;background-color: #111}
+    100% {top: calc(var(--letter-size) + 3px); left: -1vw; background-color: #000066;};
 }
 
 @media (max-width: 600px) {

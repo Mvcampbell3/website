@@ -2,231 +2,45 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Home</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/load.css">
-    <link rel="stylesheet" href="assets/css/home.css">
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
-        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="assets/js/app.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Michael's Portfolio</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
-    <section id="home" class="bg">
-        <div class="area">
-            <div class="letterBox">
-                <div class="letter front m"></div>
-                <div class="letter front i"></div>
-                <div class="letter front c"></div>
-                <div class="letter front h"></div>
-                <div class="letter front a"></div>
-                <div class="letter front e"></div>
-                <div class="letter front l"></div>
-            </div>
 
-            <div class="letterBox backBox">
-                <div id="first" class="letter back m"></div>
-                <div id="second" class="letter back i"></div>
-                <div id="third" class="letter back c"></div>
-                <div id="fourth" class="letter back h"></div>
-                <div id="fifth" class="letter back a"></div>
-                <div class="letter back e"></div>
-                <div id="last" class="letter back l"></div>
+  <section id="home" class="panel">
+    <div id="left" class="side upside">
+      <div class="topLeft top">
+        <h2>Michael Campbell</h2>
 
-            </div>
-        </div>
-        <p class="aboutContent">
-            <span class="hidden">I am a web developer who recently grauduated from the UCF Coding
-                Bootcamp.</span>
-            <span class="hidden">Technologies that I often use in my projects are HTML5, CSS, Javascript, React,
-                Node.js, and Express.</span>
-            <span class="hidden"> I am also comfortable using CSS frameworks such as Bootstrap and Materialize.</span>
-        </p>
-    </section>
-
-    <div class="navBar">
-        <a class="tag there" href="#home">Home</a>
-        <a class="tag" href="#portfolio">Portfolio</a>
-        <a class="tag" href="#contact">Contact</a>
+      </div>
+      <p>
+        I am a web developer who recently graduated from the UCF Fullstack Coding Bootcamp.
+        I love making websites! Some of the things that I bring into my web devlopment are my work ethic, my creativity,
+        and my love of learning.
+      </p>
     </div>
-
-    <div class="container">
-        <section id="portfolio">
-            <div class="regular">
-                <div id="projectDisplay" class="projectDisplay">
-                    <img src="assets/images/rvReddit.png" alt="" id="displayPic">
-                    <div class="information">
-                        <h3 id="projectName">Rover Reddit</h3>
-                        <p id="projectContent">
-                            My Final Project for the Bootcamp, we made an application which leveraged the Mars Rover
-                            Photos API, which has access to over 500,000 pictures, into a interactive social media hub.
-                            Utilizes the MERN stack.
-                        </p>
-                        <div class="buttonAreaProject">
-                            <a href="https://radiant-mountain-42955.herokuapp.com/" target="_blank" class="btnPro"
-                                id="web">Website</a>
-                            <a href="https://github.com/DavidWeid/Space-Pair-Project" target="_blank" class="btnPro"
-                                id="git">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- New Lineup -->
-                <!-- 1. Project 3 -->
-                <!-- 2. Finish Yahztee -->
-                <!-- 3. Space Scraper -->
-                <!-- 4. Google Books -->
-                <!-- 5. Starfew Valley? -->
-
-
-
-                <div class="projectBottom" id="projectPage" data-show="projectDisplay">
-                    <div class="mainProjects">
-                        <div class="projectBox active" data-which="0" data-web="true"
-                            data-carry="assets/images/rpsScreen.png">
-                            <h3 class="projectTitle">Rover Reddit</h3>
-                            <img id="Pic1" src="assets/images/rvReddit.png" alt="" class="projectPic">
-                        </div>
-                        <div class="projectBox" data-which="1" data-web="false"
-                            data-carry="assets/images/yahtzeeScreen.png">
-                            <h3 class="projectTitle">Yahtzee</h3>
-                            <img id="Pic2" src="assets/images/yahtzeeScreen.png" alt="" class="projectPic">
-                        </div>
-                        <div class="projectBox" data-which="2" data-web="true"
-                            data-carry="assets/images/stardewSmall.gif">
-                            <h3 class="projectTitle">Stardew Match Maker</h3>
-                            <img id="Pic3" src="assets/images/stardewPic.png" alt="" class="projectPic">
-                        </div>
-                        <div class="projectBox" data-which="3" data-web="true" data-carry="assets/images/burger.gif">
-                            <h3 class="projectTitle">Burger App</h3>
-                            <img id="Pic4" src="assets/images/burgerPic.png" alt="" class="projectPic">
-                        </div>
-                        <div class="projectBox" data-which="4" data-web="false"
-                            data-carry="assets/images/bamazonLarge.gif">
-                            <h3 class="projectTitle">Bamazon</h3>
-                            <img id="Pic5" src="assets/images/bamazonPic.png" alt="" class="projectPic">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="notRegular">
-                <div class="mobileWrapper">
-                    <div class="mobileProject">
-                        <h3 class="mobileTitle">Rock Paper Scissors</h3>
-                        <img src="assets/images/rvReddit.png" alt="rock">
-                        <p class="mobileContent">
-                            My Final Project for the Bootcamp, we made an application which leveraged the Mars Rover
-                            Photos API, which has access to over 500,000 pictures, into a interactive social media hub.
-                            Utilizes the MERN stack.
-                        </p>
-                        <div class="mobileButtons">
-                            <a href="https://radiant-mountain-42955.herokuapp.com/" target="_blank" class="btnMob"
-                                id="web">Website</a>
-                            <a href="https://github.com/DavidWeid/Space-Pair-Project" target="_blank"
-                                class="btnMob">GitHub</a>
-                        </div>
-                    </div>
-                    <div class="mobileProject">
-                        <h3 class="mobileTitle">Yahtzee</h3>
-                        <img src="assets/images/yahtzeeScreen.png" alt="yahtzee">
-                        <p class="mobileContent">
-                            This is an ongoing personal project which has its beginnings back when I just started to
-                            learn web design. It started as a simple way to learn arrays and is turning into a fully
-                            finished game.
-                        </p>
-                        <div class="mobileButtons">
-                            <a href="https://github.com/Mvcampbell3/Yahtzee" target="_blank" class="btnMob">GitHub</a>
-                        </div>
-                    </div>
-                    <div class="mobileProject">
-                        <h3 class="mobileTitle">Stardew Match Maker</h3>
-                        <img src="assets/images/stardewPic.png" alt="rock">
-                        <p class="mobileContent">
-                            This express app is based on the video game Stardew Valley. You take a survey to see which
-                            player from the game you should marry. Since there is online multiplayer, you will also be
-                            tested against people who have already taken it. Good Luck!
-                        </p>
-                        <div class="mobileButtons">
-                            <a href="https://secret-temple-27121.herokuapp.com/" target="_blank" class="btnMob"
-                                id="web">Website</a>
-                            <a href="https://github.com/Mvcampbell3/friend_finder" target="_blank"
-                                class="btnMob">Github</a>
-                        </div>
-                    </div>
-                    <div class="mobileProject">
-                        <h3 class="mobileTitle">Burger App</h3>
-                        <img src="assets/images/burgerPic.png" alt="rock">
-                        <p class="mobileContent">
-                            This is an express app that utilizes both express-handlebars and MySql to store burgers into
-                            a menu. You can add burgers, devour them, put them back, or delete them. Sound tasty?
-                        </p>
-                        <div class="mobileButtons">
-                            <a href="https://burger-app-mvcamp.herokuapp.com/" target="_blank" class="btnMob"
-                                id="web">Website</a>
-                            <a href="https://github.com/Mvcampbell3/burgers" target="_blank" class="btnMob">Github</a>
-                        </div>
-                    </div>
-                    <div class="mobileProject">
-                        <h3 class="mobileTitle">Bamazon</h3>
-                        <img src="assets/images/bamazonPic.png" alt="yahtzee">
-                        <p class="mobileContent">
-                            Bamazon is a command line node.js app that simulates the interaction on online shopping.
-                            Customers can purchase items, Managers can purchase more inventory or add new products.
-                            Supervisors can view the financial standings of the departments and even create new
-                            departments.
-                        </p>
-                        <div class="mobileButtons">
-                            <a href="https://github.com/Mvcampbell3/MySQL-Node.js" target="_blank"
-                                class="btnMob">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-
-        </section>
-        <!-------------- End of project page -------------->
-
-        <section id="contact">
-            <div class="wrapper flex">
-                <div class="formArea">
-                    <div class="inputGroup">
-                        <label class="labelContact" for="name">Name</label><br>
-                        <input type="text" name="name" id="nameInput"><br>
-                    </div>
-                    <div class="inputGroup">
-                        <label class="labelContact" for="name">Email</label><br>
-                        <input type="text" name="email" id="emailInput"><br>
-                    </div>
-                    <div class="inputGroup">
-                        <label class="labelContact" for="message">Message</label><br>
-                        <textarea name="message" id="message" cols="" rows=""></textarea>
-                    </div>
-                    <button class="subContact">Send</button>
-                </div>
-                <div class="buttonContact">
-
-                </div>
-                <div class="reachArea">
-                    <h3 class="myName">Michael Campbell</h3>
-                    <div class="linkArea">
-                        <i class="icon fas fa-envelope-square"><span class="wordIcon"> mvcampbell3@gmail.com</span></i>
-                        <a href="https://www.linkedin.com/in/mvcampbell3/"><i class="icon fab fa-linkedin"><span
-                                    class="wordIcon bolder"> LinkedIn</span></i></a>
-                        <a href="https://github.com/Mvcampbell3"><i class="icon fab fa-github-square"><span
-                                    class="wordIcon bolder"> GitHub</span></i></a>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <div id="right" class="side downside">
+      <div class="topRight top">
+        <h2>Technologies</h2>
+      </div>
+      <div class="things">
+        <div class="thing">HTML</div>
+        <div class="thing">CSS</div>
+        <div class="thing">Javascript</div>
+        <div class="thing">MySql</div>
+        <div class="thing">MongoDB</div>
+        <div class="thing">React</div>
+        <div class="thing">Express</div>
+        <div class="thing">Node</div>
+      </div>
     </div>
+  </section>
 
-
+  <script src="./assets/js/main.js"></script>
 </body>
 
 </html>

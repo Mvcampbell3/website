@@ -30,6 +30,11 @@ body{
     border-bottom: .5px black solid;
 }
 
+.placeHolder{
+    width: 100;
+    height: 40px;
+}
+
 .tag{
     display: block;
     font-size: 20px;
@@ -54,28 +59,14 @@ body{
 }
 
 .aboutContent{
-    position: absolute;
-    background-color: #000066;
-    padding: 10px;
-    border-radius: 15px;
-    bottom: 15vh;
-    width: 80%;
-    left: calc(50vw - 40%);
-    font-size: 2vw;
-    line-height: 1.5;
-    text-indent: 20px;
     font-family: 'Segoe UI', Tahoma, 'Geneva', Verdana, sans-serif;
-    color: #fff;
-    animation-name: easeIn;
-    animation-duration: 1s;
-    animation-delay: 2.150s;
-    animation-fill-mode: forwards;
-    opacity: 0;
-}
-
-@keyframes easeIn{
-    0% {opacity: 0}
-    100% {opacity: 1};
+    font-size: 30px;
+    width: 50%;
+    margin: 0 0 0 auto;
+    padding: 20px;
+    text-indent: 20px;
+    background-color: #333;
+    color: white;
 }
 
 .container{
@@ -88,11 +79,6 @@ section{
     scroll-behavior: smooth;
     position: relative;
     border-bottom: 1px black solid;
-}
-
-.hidden{
-    opacity: 0;
-
 }
 
 .fadeIn{
@@ -393,9 +379,6 @@ input[type=text] {
 
 
 @media (max-width: 900px) {
-    .aboutContent{
-        font-size: 3.25vw;
-    }
 
     .flex{
         flex-direction: column-reverse;
