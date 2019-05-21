@@ -1,0 +1,100 @@
+*{
+  box-sizing: border-box;
+}
+
+body, html, h1, h2, h3, h4, h5, h6, p , ul, li, a {
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  overflow: hidden;
+  background-color: whitesmoke;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+/* Header */
+
+
+.panel{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+}
+
+.side{
+  width: 50%;
+}
+
+.side h2{
+  text-align: center;
+}
+
+.side p{
+  font-size: 30px;
+  width: 80%;
+  margin: 2em auto 0 auto;
+}
+
+.top{
+  width: 100%;
+  line-height: 1.5;
+  padding: 15px 0;
+}
+
+.topLeft{
+  background-color: #222;
+  color: whitesmoke;
+}
+
+.topRight{
+  background-color: skyblue;
+  color: black;
+}
+
+.upside{
+  background-color: skyblue;
+  position: relative;
+  top: -100vh;
+  animation-name: downSlide;
+  animation-duration: 750ms;
+  animation-fill-mode: forwards;
+  line-height: 1.5;
+  text-indent: 10px;
+}
+
+.downside{
+  background-color: #222;
+  position: relative;
+  color: whitesmoke;
+  top: 100vh;
+  animation-name: upSlide;
+  animation-duration: 750ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes downSlide {
+  0%{ top: -100vh}
+  100% {top: 0}
+}
+
+@keyframes upSlide {
+  0%{ top: 100vh}
+  100% {top: 0}
+}
+
+.things{
+  width: fit-content;
+  margin: 2em auto 0 auto;
+}
+
+.thing{
+  border: 1px whitesmoke solid;
+  padding: 5px;
+  width: 100px;
+  text-align: center;
+}

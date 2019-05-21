@@ -29,8 +29,6 @@ $(function() {
     $(this).addClass("there");
   });
 
-
-
   $(".projectBox").on("click", function() {
     $(".projectBox").removeClass("active");
     $(this).addClass("active");
