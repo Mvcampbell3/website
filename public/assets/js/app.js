@@ -101,7 +101,7 @@ function seperately(name) {
 }
 
 const nameArray = [
-  "Rock Paper Scissors",
+  "Rover Reddit",
   "Google Books",
   "Stardew Match Maker",
   "Space Scrape",
