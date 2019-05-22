@@ -69,19 +69,21 @@
     clip-path: polygon(0 100%, 0 0, 32% 0, 34% 100%, 68% 100%, 69% 0%, 100% 0, 100% 100%);
 }
 
-.bg{
-    height:100vh;
-    width: 100vw;
-    position: absolute;
-    left: 0;
+.area{
     position: relative;
-    z-index: -1;
+    top: -50px;
 }
 
-.area{
-    width: fit-content;
-    top: 50px;
-    left: 29vw;
+.homeHolder{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 15px 0;
+    border-top: 5px #000066 solid;
+    border-bottom: 5px #000066 solid;
+    margin-top: 10vh;
+    background-color: #eee;
 }
 
 .letter{
@@ -91,14 +93,13 @@
 }
 
 .letterBox{
-    /* position: absolute; */
     display: flex;
 }
 
 .backBox{
     position: absolute;
-    top: 63px;
-    left: 23px;
+    top: 3px;
+    left: 3px;
 }
 
 .transition-1{
@@ -127,27 +128,24 @@
 @keyframes fallOff{
     0% {top: 0; left:0; background-color: #111}
     60%{top: calc(4vw - 3px); left: 0px;background-color: #111}
-    100% {top: calc(var(--letter-size) + 3px); left: -1vw; background-color: #000066;};
+    100% {top: calc(var(--letter-size) + 3px); left: -3px; background-color: #000066;};
+}
+
+@media (max-width: 900px) {
+    .homeHolder{
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .area{
+        top: 0px;
+        margin-bottom: 70px;
+    }
 }
 
 @media (max-width: 600px) {
     :root{
         --letter-size: 10vw;
-    }
-
-    .area{
-        left: 20vw;
-    }
-
-    @keyframes fallOff{
-        0% {top: 0; left:0; background-color: #111}
-        60%{top: calc(4vw - 6x); left: 0px;background-color: #111}
-        100% {top: calc(var(--letter-size) + 6px); left: -4vw; background-color: #000066;};
-    }
-
-    .backBox{
-        left: 2px;
-        top: 2px;
     }
 }
 

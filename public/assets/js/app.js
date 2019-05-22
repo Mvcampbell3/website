@@ -102,32 +102,34 @@ function seperately(name) {
 
 const nameArray = [
   "Rock Paper Scissors",
-  "Yahtzee",
+  "Google Books",
   "Stardew Match Maker",
-  "Burger App",
-  "Bamazon"
+  "Space Scrape",
+  "Skyrim Click Game"
 ]
 
 const informationArray = [
   "My Final Project for the Bootcamp, we made an application which leveraged the Mars Rover Photos API, which has access to over 500,000 pictures, into a interactive social media hub. Utilizes the MERN stack.",
-  "This is an ongoing personal project which has its beginnings back when I just started to learn web design. It started as a simple way to learn arrays and is turning into a fully finished game.",
+  "This is a React application which allows the user to search the Google Books API and save books to their read list. One there, the books can be marked as read, unread, or deleted. Also links to books google store page. Uses MERN stack.",
   "This express app is based on the video game Stardew Valley. You take a survey to see which player from the game you should marry. Since there is online multiplayer, you will also be tested against people who have already taken it. Good Luck!",
-  "This is an express app that utilizes both express-handlebars and MySql to store burgers into a menu. You can add burgers, devour them, put them back, or delete them. Sound tasty?",
-  "Bamazon is a command line node.js app that simulates the interaction on online shopping. Customers can purchase items, Managers can purchase more inventory or add new products. Supervisors can view the financial standings of the departments and even create new departments."
+  "This is an express app that scrapes space stories from the website space.com/news. Users can also comment on the articles. Uses Axios and Cheerio, Express, Node.js, and Handlebars.",
+  "Skyrim Click Game is a React app that tests the players memory. Scores are based on number of correct guesses made in a row. A player wins the game by correctly clicking on all of the characters with clicking a duplicate."
 ];
 
 const webDestinations = [
-  "https://radiant-mountain-42955.herokuapp.com/",
+  "https://rover-reddit.herokuapp.com/",
+  "https://mcbooks.herokuapp.com/",
   "https://secret-temple-27121.herokuapp.com/",
-  "https://burger-app-mvcamp.herokuapp.com/"
+  "https://frozen-ravine-29791.herokuapp.com/",
+  "https://skyrim-clickgame.herokuapp.com/"
 ]
 
 const gitDestinations = [
   "https://github.com/DavidWeid/Space-Pair-Project",
-  "https://github.com/Mvcampbell3/Yahtzee",
+  "https://github.com/Mvcampbell3/googleBookSearch",
   "https://github.com/Mvcampbell3/friend_finder",
-  "https://github.com/Mvcampbell3/burgers",
-  "https://github.com/Mvcampbell3/MySQL-Node.js"
+  "https://github.com/Mvcampbell3/scraper3000",
+  "https://github.com/Mvcampbell3/clickgame"
 ]
 
 function setButtons(which, web) {
@@ -148,17 +150,19 @@ function setButtons(which, web) {
       $("#git").attr("href", gitDestinations[0]);
       break;
     case "1":
+      $("#web").attr("href", webDestinations[1]);
       $("#git").attr("href", gitDestinations[1]);
       break;
     case "2":
-      $("#web").attr("href", webDestinations[1]);
+      $("#web").attr("href", webDestinations[2]);
       $("#git").attr("href", gitDestinations[2]);
       break;
     case "3":
-      $("#web").attr("href", webDestinations[2]);
+      $("#web").attr("href", webDestinations[3]);
       $("#git").attr("href", gitDestinations[3]);
       break;
     case "4":
+      $("#web").attr("href", webDestinations[4]);
       $("#git").attr("href", gitDestinations[4]);
   }
 }

@@ -19,33 +19,39 @@
 <body>
     <section id="home" class="bg">
         <div class="placeHolder"></div>
+        <div class="homeHolder">
+            <div class="area">
+                <div class="letterBox">
+                    <div class="letter front m"></div>
+                    <div class="letter front i"></div>
+                    <div class="letter front c"></div>
+                    <div class="letter front h"></div>
+                    <div class="letter front a"></div>
+                    <div class="letter front e"></div>
+                    <div class="letter front l"></div>
+                </div>
 
-        <div class="area">
-            <div class="letterBox">
-                <div class="letter front m"></div>
-                <div class="letter front i"></div>
-                <div class="letter front c"></div>
-                <div class="letter front h"></div>
-                <div class="letter front a"></div>
-                <div class="letter front e"></div>
-                <div class="letter front l"></div>
+                <div class="letterBox backBox">
+                    <div id="first" class="letter back m"></div>
+                    <div id="second" class="letter back i"></div>
+                    <div id="third" class="letter back c"></div>
+                    <div id="fourth" class="letter back h"></div>
+                    <div id="fifth" class="letter back a"></div>
+                    <div class="letter back e"></div>
+                    <div id="last" class="letter back l"></div>
+
+                </div>
             </div>
-
-            <div class="letterBox backBox">
-                <div id="first" class="letter back m"></div>
-                <div id="second" class="letter back i"></div>
-                <div id="third" class="letter back c"></div>
-                <div id="fourth" class="letter back h"></div>
-                <div id="fifth" class="letter back a"></div>
-                <div class="letter back e"></div>
-                <div id="last" class="letter back l"></div>
-
-            </div>
+            <p class="aboutContent">
+                I am web devloper who recently graduated from the UCF Fullstack Coding Bootcamp. I love to create great
+                looking websites that are highly functional and useful. The languages which I am strong at are HTML,
+                CSS, and Javascript.
+                I have experience using both SQL and non-SQL databases. Some of the technologies that I use to make
+                websites include React, Node.js, Express, MongoDB, and MySql. I am learning about how to utilize style
+                sheet languages such as SASS. I feel that the strongest attribute that I bring to web development is my
+                appetite for learning.
+            </p>
         </div>
-        <p class="aboutContent">
-            I am web devloper who recently graduated from the UCF Fullstack Coding Bootcamp. I love to create great looking websites that are highly functional and useful. The languages which I am strong at are HTML, CSS, and Javascript.
-            I have experience using both SQL and non-SQL databases. Some of the technologies that I use to make websites include React, Node.js, Express, MongoDB, and MySql. I am learning about how to utilize style sheet languages such as SASS. I feel that the strongest attribute that I bring to web development is my appetite for learning.
-        </p>
     </section>
 
     <div class="navBar">
@@ -58,7 +64,7 @@
         <section id="portfolio">
             <div class="regular">
                 <div id="projectDisplay" class="projectDisplay">
-                    <img src="assets/images/rvReddit.png" alt="" id="displayPic">
+                    <img src="assets/images/rover.png" alt="" id="displayPic">
                     <div class="information">
                         <h3 id="projectName">Rover Reddit</h3>
                         <p id="projectContent">
@@ -67,47 +73,39 @@
                             Utilizes the MERN stack.
                         </p>
                         <div class="buttonAreaProject">
-                            <a href="https://radiant-mountain-42955.herokuapp.com/" target="_blank" class="btnPro"
+                            <a href="https://rover-reddit.herokuapp.com/" target="_blank" class="btnPro"
                                 id="web">Website</a>
                             <a href="https://github.com/DavidWeid/Space-Pair-Project" target="_blank" class="btnPro"
                                 id="git">GitHub</a>
                         </div>
                     </div>
                 </div>
-                <!-- New Lineup -->
-                <!-- 1. Project 3 -->
-                <!-- 2. Finish Yahztee -->
-                <!-- 3. Space Scraper -->
-                <!-- 4. Google Books -->
-                <!-- 5. Starfew Valley? -->
-
-
 
                 <div class="projectBottom" id="projectPage" data-show="projectDisplay">
                     <div class="mainProjects">
                         <div class="projectBox active" data-which="0" data-web="true"
-                            data-carry="assets/images/rpsScreen.png">
+                            data-carry="assets/images/rovermove.gif">
                             <h3 class="projectTitle">Rover Reddit</h3>
-                            <img id="Pic1" src="assets/images/rvReddit.png" alt="" class="projectPic">
+                            <img id="Pic1" src="assets/images/rover.png" alt="" class="projectPic">
                         </div>
-                        <div class="projectBox" data-which="1" data-web="false"
-                            data-carry="assets/images/yahtzeeScreen.png">
-                            <h3 class="projectTitle">Yahtzee</h3>
-                            <img id="Pic2" src="assets/images/yahtzeeScreen.png" alt="" class="projectPic">
+                        <div class="projectBox" data-which="1" data-web="true"
+                            data-carry="assets/images/googlebooks.gif">
+                            <h3 class="projectTitle">Google Books</h3>
+                            <img id="Pic2" src="assets/images/googlebookapp.png" alt="" class="projectPic">
                         </div>
                         <div class="projectBox" data-which="2" data-web="true"
                             data-carry="assets/images/stardewSmall.gif">
                             <h3 class="projectTitle">Stardew Match Maker</h3>
                             <img id="Pic3" src="assets/images/stardewPic.png" alt="" class="projectPic">
                         </div>
-                        <div class="projectBox" data-which="3" data-web="true" data-carry="assets/images/burger.gif">
-                            <h3 class="projectTitle">Burger App</h3>
-                            <img id="Pic4" src="assets/images/burgerPic.png" alt="" class="projectPic">
+                        <div class="projectBox" data-which="3" data-web="true" data-carry="assets/images/spacemove.gif">
+                            <h3 class="projectTitle">Space Scrape</h3>
+                            <img id="Pic4" src="assets/images/spacescrapestill.png" alt="" class="projectPic">
                         </div>
-                        <div class="projectBox" data-which="4" data-web="false"
-                            data-carry="assets/images/bamazonLarge.gif">
-                            <h3 class="projectTitle">Bamazon</h3>
-                            <img id="Pic5" src="assets/images/bamazonPic.png" alt="" class="projectPic">
+                        <div class="projectBox" data-which="4" data-web="true"
+                            data-carry="assets/images/skyrimmove2.gif">
+                            <h3 class="projectTitle">Skyrim Click Game</h3>
+                            <img id="Pic5" src="assets/images/skyrimstill.png" alt="" class="projectPic">
                         </div>
                     </div>
                 </div>
@@ -116,29 +114,31 @@
                 <div class="mobileWrapper">
                     <div class="mobileProject">
                         <h3 class="mobileTitle">Rock Paper Scissors</h3>
-                        <img src="assets/images/rvReddit.png" alt="rock">
+                        <img src="assets/images/rover.png" alt="rock">
                         <p class="mobileContent">
                             My Final Project for the Bootcamp, we made an application which leveraged the Mars Rover
                             Photos API, which has access to over 500,000 pictures, into a interactive social media hub.
                             Utilizes the MERN stack.
                         </p>
                         <div class="mobileButtons">
-                            <a href="https://radiant-mountain-42955.herokuapp.com/" target="_blank" class="btnMob"
+                            <a href="https://rover-reddit.herokuapp.com/" target="_blank" class="btnMob"
                                 id="web">Website</a>
                             <a href="https://github.com/DavidWeid/Space-Pair-Project" target="_blank"
                                 class="btnMob">GitHub</a>
                         </div>
                     </div>
                     <div class="mobileProject">
-                        <h3 class="mobileTitle">Yahtzee</h3>
-                        <img src="assets/images/yahtzeeScreen.png" alt="yahtzee">
+                        <h3 class="mobileTitle">Google Books</h3>
+                        <img src="assets/images/googlebookapp.png" alt="google">
                         <p class="mobileContent">
-                            This is an ongoing personal project which has its beginnings back when I just started to
-                            learn web design. It started as a simple way to learn arrays and is turning into a fully
-                            finished game.
+                            This is a React application which allows the user to search the Google Books API and save
+                            books to their read list. One there, the books can be marked as read, unread, or deleted.
+                            Also links to books google store page. Uses MERN stack.
                         </p>
                         <div class="mobileButtons">
-                            <a href="https://github.com/Mvcampbell3/Yahtzee" target="_blank" class="btnMob">GitHub</a>
+                            <a href="https://mcbooks.herokuapp.com/" target="_blank" class="btnMob">Website</a>
+                            <a href="https://github.com/Mvcampbell3/googleBookSearch" target="_blank"
+                                class="btnMob">GitHub</a>
                         </div>
                     </div>
                     <div class="mobileProject">
@@ -157,29 +157,31 @@
                         </div>
                     </div>
                     <div class="mobileProject">
-                        <h3 class="mobileTitle">Burger App</h3>
-                        <img src="assets/images/burgerPic.png" alt="rock">
+                        <h3 class="mobileTitle">Space Scrape</h3>
+                        <img src="assets/images/spacescrapestill.png" alt="space">
                         <p class="mobileContent">
-                            This is an express app that utilizes both express-handlebars and MySql to store burgers into
-                            a menu. You can add burgers, devour them, put them back, or delete them. Sound tasty?
+                            This is an express app that scrapes space stories from the website space.com/news. Users can
+                            also comment on the articles. Uses Axios and Cheerio, Express, Node.js, and Handlebars.
                         </p>
                         <div class="mobileButtons">
-                            <a href="https://burger-app-mvcamp.herokuapp.com/" target="_blank" class="btnMob"
+                            <a href="https://frozen-ravine-29791.herokuapp.com/" target="_blank" class="btnMob"
                                 id="web">Website</a>
-                            <a href="https://github.com/Mvcampbell3/burgers" target="_blank" class="btnMob">Github</a>
+                            <a href="https://github.com/Mvcampbell3/scraper3000" target="_blank"
+                                class="btnMob">Github</a>
                         </div>
                     </div>
                     <div class="mobileProject">
-                        <h3 class="mobileTitle">Bamazon</h3>
-                        <img src="assets/images/bamazonPic.png" alt="yahtzee">
+                        <h3 class="mobileTitle">Skyrim Click Game</h3>
+                        <img src="assets/images/skyrimstill.png" alt="yahtzee">
                         <p class="mobileContent">
-                            Bamazon is a command line node.js app that simulates the interaction on online shopping.
-                            Customers can purchase items, Managers can purchase more inventory or add new products.
-                            Supervisors can view the financial standings of the departments and even create new
-                            departments.
+                            Skyrim Click Game is a React app that tests the players memory. Scores are based on number
+                            of correct guesses made in a row. A player wins the game by correctly clicking on all of the
+                            characters with clicking a duplicate.
                         </p>
                         <div class="mobileButtons">
-                            <a href="https://github.com/Mvcampbell3/MySQL-Node.js" target="_blank"
+                            <a href="https://skyrim-clickgame.herokuapp.com/" target="_blank"
+                                class="btnMob">Website</a>
+                            <a href="https://github.com/Mvcampbell3/clickgame" target="_blank"
                                 class="btnMob">GitHub</a>
                         </div>
                     </div>
