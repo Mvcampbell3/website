@@ -110,7 +110,7 @@ const nameArray = [
 
 const informationArray = [
   "My Final Project for the Bootcamp, we made an application which leveraged the Mars Rover Photos API, which has access to over 500,000 pictures, into a interactive social media hub. Utilizes the MERN stack.",
-  "This is a React application which allows the user to search the Google Books API and save books to their read list. One there, the books can be marked as read, unread, or deleted. Also links to books google store page. Uses MERN stack.",
+  "This is a React application which allows the user to play Yahztee. This site also tracks the scores of logged in users. Have fun rolling the dice! Uses MERN stack.",
   "This express app is based on the video game Stardew Valley. You take a survey to see which player from the game you should marry. Since there is online multiplayer, you will also be tested against people who have already taken it. Good Luck!",
   "This is an express app that scrapes space stories from the website space.com/news. Users can also comment on the articles. Uses Axios and Cheerio, Express, Node.js, and Handlebars.",
   "Skyrim Click Game is a React app that tests the players memory. Scores are based on number of correct guesses made in a row. A player wins the game by correctly clicking on all of the characters with clicking a duplicate."
@@ -118,7 +118,7 @@ const informationArray = [
 
 const webDestinations = [
   "https://rover-reddit.herokuapp.com/",
-  "https://mcbooks.herokuapp.com/",
+  "https://yahtzee-react.herokuapp.com/",
   "https://secret-temple-27121.herokuapp.com/",
   "https://frozen-ravine-29791.herokuapp.com/",
   "https://skyrim-clickgame.herokuapp.com/"
@@ -126,7 +126,7 @@ const webDestinations = [
 
 const gitDestinations = [
   "https://github.com/DavidWeid/Space-Pair-Project",
-  "https://github.com/Mvcampbell3/googleBookSearch",
+  "https://github.com/Mvcampbell3/YahtzeeReact",
   "https://github.com/Mvcampbell3/friend_finder",
   "https://github.com/Mvcampbell3/scraper3000",
   "https://github.com/Mvcampbell3/clickgame"
