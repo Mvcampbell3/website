@@ -102,7 +102,7 @@ function seperately(name) {
 
 const nameArray = [
   "Rover Reddit",
-  "Google Books",
+  "Yahtzee",
   "Stardew Match Maker",
   "Space Scrape",
   "Skyrim Click Game"
