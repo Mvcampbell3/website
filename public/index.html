@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/load.css">
     <link rel="stylesheet" href="assets/css/home.css">
+    <link rel="stylesheet" href="assets/css/clocks.css">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="assets/js/app.js"></script>
@@ -45,19 +46,83 @@
             <p class="aboutContent">
                 I am web devloper who recently graduated from the UCF Fullstack Coding Bootcamp. I love to create great
                 looking websites that are highly functional and useful. The languages which I am strong at are HTML,
-                CSS, and Javascript.
-                I have experience using both SQL and non-SQL databases. Some of the technologies that I use to make
-                websites include React, Node.js, Express, MongoDB, and MySql. I am learning about how to utilize style
-                sheet languages such as SASS. I feel that the strongest attribute that I bring to web development is my
-                appetite for learning.
+                CSS, and Javascript. I have experience using both SQL and non-SQL databases. Some of the technologies
+                that I use to make
+                websites include React, Node.js, Express, MongoDB, and MySql.
             </p>
         </div>
+        <div class="oldClock">
+            <div id="firstDigit" class="digit">
+              <div id="digit_1_1" class="digit_1 bar bar1"></div>
+              <div id="digit_1_2" class="digit_1 bar bar2"></div>
+              <div id="digit_1_3" class="digit_1 bar bar3"></div>
+              <div id="digit_1_4" class="digit_1 bar bar4"></div>
+              <div id="digit_1_5" class="digit_1 bar bar5"></div>
+              <div id="digit_1_6" class="digit_1 bar bar6"></div>
+              <div id="digit_1_7" class="digit_1 bar bar7"></div>
+            </div>
+            <div id="secondDigit" class="digit">
+              <div id="digit_2_1" class="digit_2 bar bar1"></div>
+              <div id="digit_2_2" class="digit_2 bar bar2"></div>
+              <div id="digit_2_3" class="digit_2 bar bar3"></div>
+              <div id="digit_2_4" class="digit_2 bar bar4"></div>
+              <div id="digit_2_5" class="digit_2 bar bar5"></div>
+              <div id="digit_2_6" class="digit_2 bar bar6"></div>
+              <div id="digit_2_7" class="digit_2 bar bar7"></div>
+            </div>
+            <div class="seperator">
+              <div class="circle"></div>
+              <div class="circle"></div>
+            </div>
+            <div id="thirdDigit" class="digit">
+              <div id="digit_3_1" class="digit_3 bar bar1"></div>
+              <div id="digit_3_2" class="digit_3 bar bar2"></div>
+              <div id="digit_3_3" class="digit_3 bar bar3"></div>
+              <div id="digit_3_4" class="digit_3 bar bar4"></div>
+              <div id="digit_3_5" class="digit_3 bar bar5"></div>
+              <div id="digit_3_6" class="digit_3 bar bar6"></div>
+              <div id="digit_3_7" class="digit_3 bar bar7"></div>
+            </div>
+            <div id="fourthDigit" class="digit">
+              <div id="digit_4_1" class="digit_4 bar bar1"></div>
+              <div id="digit_4_2" class="digit_4 bar bar2"></div>
+              <div id="digit_4_3" class="digit_4 bar bar3"></div>
+              <div id="digit_4_4" class="digit_4 bar bar4"></div>
+              <div id="digit_4_5" class="digit_4 bar bar5"></div>
+              <div id="digit_4_6" class="digit_4 bar bar6"></div>
+              <div id="digit_4_7" class="digit_4 bar bar7"></div>
+            </div>
+            <div class="seperator">
+              <div class="circle"></div>
+              <div class="circle"></div>
+            </div>
+            <div id="fifthDigit" class="digit">
+              <div id="digit_5_1" class="digit_5 bar bar1"></div>
+              <div id="digit_5_2" class="digit_5 bar bar2"></div>
+              <div id="digit_5_3" class="digit_5 bar bar3"></div>
+              <div id="digit_5_4" class="digit_5 bar bar4"></div>
+              <div id="digit_5_5" class="digit_5 bar bar5"></div>
+              <div id="digit_5_6" class="digit_5 bar bar6"></div>
+              <div id="digit_5_7" class="digit_5 bar bar7"></div>
+            </div>
+            <div id="sixthDigit" class="digit">
+              <div id="digit_6_1" class="digit_6 bar bar1"></div>
+              <div id="digit_6_2" class="digit_6 bar bar2"></div>
+              <div id="digit_6_3" class="digit_6 bar bar3"></div>
+              <div id="digit_6_4" class="digit_6 bar bar4"></div>
+              <div id="digit_6_5" class="digit_6 bar bar5"></div>
+              <div id="digit_6_6" class="digit_6 bar bar6"></div>
+              <div id="digit_6_7" class="digit_6 bar bar7"></div>
+            </div>
+          </div>
     </section>
 
     <div class="navBar">
-        <a class="tag there" href="#home">Home</a>
-        <a class="tag" href="#portfolio">Portfolio</a>
-        <a class="tag" href="#contact">Contact</a>
+        <div class="navHolder">
+            <a class="tag there" href="#home">Home</a>
+            <a class="tag" href="#portfolio">Portfolio</a>
+            <a class="tag" href="#contact">Contact</a>
+        </div>
     </div>
 
     <div class="container">
@@ -131,7 +196,8 @@
                         <h3 class="mobileTitle">Yahtzee</h3>
                         <img src="assets/images/yahtzee.png" alt="google">
                         <p class="mobileContent">
-                            This is a React application which allows the user to play Yahztee. This site also tracks the scores of logged in users. Have fun rolling the dice! Uses MERN stack.
+                            This is a React application which allows the user to play Yahztee. This site also tracks the
+                            scores of logged in users. Have fun rolling the dice! Uses MERN stack.
                         </p>
                         <div class="mobileButtons">
                             <a href="https://yahtzee-react.herokuapp.com/" target="_blank" class="btnMob">Website</a>
@@ -177,10 +243,8 @@
                             characters with clicking a duplicate.
                         </p>
                         <div class="mobileButtons">
-                            <a href="https://skyrim-clickgame.herokuapp.com/" target="_blank"
-                                class="btnMob">Website</a>
-                            <a href="https://github.com/Mvcampbell3/clickgame" target="_blank"
-                                class="btnMob">GitHub</a>
+                            <a href="https://skyrim-clickgame.herokuapp.com/" target="_blank" class="btnMob">Website</a>
+                            <a href="https://github.com/Mvcampbell3/clickgame" target="_blank" class="btnMob">GitHub</a>
                         </div>
                     </div>
                 </div>
@@ -225,6 +289,7 @@
         </section>
     </div>
 
+    <script src="assets/js/clock.js"></script>
 
 </body>
 

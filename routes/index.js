@@ -27,10 +27,6 @@ router.post("/api/message", (req, res) => {
     })
 })
 
-router.get("/api/all", (req, res) => {
-  db.Message.find().then(result => { res.json(result) }).catch(err => res.json(err));
-})
-
 router.post("/api/secretpage", (req,res) => {
   if (req.body.pin === "1234") {
     res.json(true)

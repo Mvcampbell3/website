@@ -1,0 +1,72 @@
+.oldClock{
+  padding: 15px;
+  border: .5px black solid;
+  background-color: #ccc;
+  border-radius: 10px;
+  position: relative;
+  width: fit-content;
+  margin: 2em auto;
+  display: grid;
+  grid-template-columns: 54px 54px 15px 54px 54px 15px 54px 54px;
+}
+
+.bar{
+  width: 30px;
+  height: 7px;
+  border-radius: 10px;
+  background-color: red;
+  position: absolute;
+  display: none;
+}
+
+.digit{
+  width: 54px;
+  height: 88px;
+}
+
+.bar1{
+  transform: translateX(12px)
+}
+
+.bar2{
+  transform: rotateZ(90deg) translateX(20px) translateY(-30px);
+}
+
+.bar3{
+  transform: translateY(40px) translateX(12px);
+}
+
+.bar4{
+  transform: rotateZ(90deg) translateX(20px) translateY(5px)
+}
+
+.bar5{
+  transform: rotateZ(90deg) translateX(60px) translateY(-30px)
+}
+
+.bar6{
+  transform: translateY(80px) translateX(12px);
+}
+
+.bar7{
+  transform: rotateZ(90deg) translateX(60px) translateY(5px)
+}
+
+.seperator{
+  display: flex;
+  flex-direction: column;
+  width: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle{
+  background-color: red;
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+}
+
+.circle:nth-child(1){
+  margin-bottom: 5px;
+}
