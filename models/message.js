@@ -1,19 +1,19 @@
-module.exports = function(sequelize, DataTypes) {
-  const Message = sequelize.define("Message", {
-    name: {
-      type: DataTypes.STRING,
-      allowNull: false
-    },
+const mongoose = require("mongoose");
+const Schema = mongoose.Schema;
 
-    email: {
-      type: DataTypes.STRING,
-      allowNull: true
-    },
+const MessageSchema = new Schema({
+  name: {
+    type: String,
+    required: true
+  },
+  email: {
+    type: String,
+    required: true
+  },
+  message: {
+    type: String,
+    required: true
+  }
+})
 
-    text: {
-      type: DataTypes.TEXT,
-      allowNull: false
-    }
-  });
-  return Message;
-};
+module.exports = Message = mongoose.model("Message", MessageSchema)

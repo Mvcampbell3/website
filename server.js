@@ -1,42 +1,30 @@
 const express = require("express");
 const app = express();
 const path = require("path");
+const mongoose = require("mongoose");
+const routes = require("./routes")
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-const db = require("./models");
+app.use(express.static(path.join(__dirname, 'public'), { extensions: ['html'] }));
 
+app.use(routes)
 
-app.use(express.static("public"));
+const PORT = process.env.PORT || 3000;
 
-const PORT = process.env.PORT || 7000;
+const dbase = "portfolio"
 
-
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "/index.html"));
-})
-
-app.post("/api/message", (req,res) => {
-  db.Message.create({
-    name: req.body.name,
-    email: req.body.email,
-    text: req.body.text
-  }).then(result => {
-    res.json(result);
-  })
-})
-
-app.get("/api/all", (req,res) => {
-  db.Message.findAll({}).then(result => {res.json(result)});
-})
-
-db.sequelize.sync().then(function() {
-  app.listen(PORT, function() {
-    console.log(
-      "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
-      PORT,
-      PORT
-    );
+mongoose
+  .connect(process.env.MONGODB_URI || `mongodb://localhost/${dbase}`, { useNewUrlParser: true })
+  .then(() => {
+    console.log("mongo connected")
   });
+
+app.listen(PORT, function() {
+  console.log(
+    "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
+    PORT,
+    PORT
+  );
 });
