@@ -1,3 +1,3 @@
 module.exports = {
-  Message: require("./Message.js")
+  Message: require("./message.js")
 }
