@@ -79,11 +79,12 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding: 15px 0;
+    padding: 30px 0;
     border-top: 5px #000066 solid;
     border-bottom: 5px #000066 solid;
     margin-top: 10vh;
     background-color: #eee;
+    opacity: .80;
 }
 
 .letter{

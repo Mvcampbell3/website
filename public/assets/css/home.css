@@ -1,20 +1,10 @@
 *{
     box-sizing: border-box;
-}
-
-p{
-    margin:0;
-    padding: 0;
-}
-
-html {
-    padding: 0;
     margin: 0;
+    padding: 0;
 }
 
 body{
-    margin: 0;
-    padding: 0;
     overflow-x: hidden;
     height: 100vh;
     width: 100%;
@@ -35,6 +25,7 @@ body{
     box-sizing: border-box;
     background-color: #ddd;
     border-bottom: .5px black solid;
+    opacity: .75;
 }
 
 .placeHolder{
@@ -132,7 +123,7 @@ section{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     transition: all, .5s;
 }
 
