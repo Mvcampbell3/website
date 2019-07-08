@@ -29,7 +29,7 @@ router.post("/api/message", (req, res) => {
 
 router.post("/api/secretpage", (req,res) => {
   if (req.body.pin === "1234") {
-    db.message.find()
+    db.Message.find()
       .then(messages => res.json(messages))
       .catch(err => res.json(err))
   } else {
