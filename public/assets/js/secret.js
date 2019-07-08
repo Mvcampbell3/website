@@ -9,15 +9,12 @@ function getClearance() {
   const pin = document.getElementById("pin").value.trim();
   $.ajax("/api/secretpage", { method: "POST", data: { pin: pin } })
     .then(result => {
-      console.log(result)
-      if (result === true) {
-        $.ajax("/api/all", { method: "GET" })
-          .then(data => {
-            messages = data;
-            console.log(data);
+      if (result !== false) {
+            messages = result;
+            console.log(result);
             showMessages();
-          })
-          .catch(err => console.log(err))
+      } else {
+        alert("wrong pin")
       }
     })
     .catch(err => console.log(err))

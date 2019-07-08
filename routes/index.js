@@ -33,7 +33,7 @@ router.post("/api/secretpage", (req,res) => {
       .then(messages => res.json(messages))
       .catch(err => res.json(err))
   } else {
-    res.redirect("/")
+    res.json(false)
   }
 })
 
