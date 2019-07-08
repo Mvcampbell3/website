@@ -41,14 +41,4 @@ function showMessages() {
   })
 }
 
-let switchMe = false;
-const box = document.getElementById("box");
-box.addEventListener("click", function() {
-  if (switchMe) {
-		switchMe = false;
-  box.classList = "box";
-} else {
-    switchMe = true;
-    box.classList = "box popUp";
-  }
-})
+
