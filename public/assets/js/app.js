@@ -1,5 +1,4 @@
 $(function() {
-
   setTimeout(function() {
     $(".back").addClass("fall")
     setTimeout(function() {
@@ -12,6 +11,18 @@ $(function() {
       document.querySelector(".area").style.cursor = "default";
     }, 450);
   }, 500)
+
+  window.addEventListener("scroll", function(){
+    const leftBack = this.document.getElementById("leftBack");
+    const rightBack = this.document.getElementById("rightBack");
+    if (this.window.scrollY > 350) {
+      leftBack.classList.add("leftEnd")
+      rightBack.classList.add("rightEnd")
+    } else {
+      leftBack.classList.remove("leftEnd")
+      rightBack.classList.remove("rightEnd")
+    }
+  })
 
   $(".navBar a").on("click", function(e) {
     e.preventDefault();
