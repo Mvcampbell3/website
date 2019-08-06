@@ -1,13 +1,53 @@
-// const topLink = document.getElementById("topLink")
-// const middleLink = document.getElementById("middleLink")
-// const bottomLink = document.getElementById("bottomLink")
+const projectHolder = document.getElementById("projectHolder");
+const leftMover = document.getElementById("leftMover");
+const rightMover = document.getElementById("rightMover");
 
-// middleLink.addEventListener("mouseover", function(){
-//   topLink.style.borderBottom = "0px black solid";
-//   bottomLink.style.borderTop = "0px black solid";
-// })
+let pos = 0;
+let running = false;
 
-// middleLink.addEventListener("mouseout", function(){
-//   topLink.style.borderBottom = "2.5px black solid";
-//   bottomLink.style.borderTop = "2.5px black solid";
-// })
+leftMover.addEventListener("click", moveRight);
+rightMover.addEventListener("click", moveLeft);
+
+function moveLeft() {
+  if (!running) {
+    console.log(pos)
+    running = true;
+    const leftAnimate = projectHolder.animate([
+      { transform: `translateX(${pos * -350}px)` },
+      { transform: `translateX(${(pos + 1) * -350}px)` }
+    ], {
+        duration: 333,
+        fill: "forwards",
+        easing: "ease-out"
+      })
+
+    leftAnimate.onfinish = function() {
+      console.log("this is over")
+      pos++;
+      running = false;
+    }
+  }
+
+}
+
+function moveRight() {
+  if (!running) {
+    console.log(pos)
+    running = true;
+    const rightAnimate = projectHolder.animate([
+      { transform: `translateX(${pos * -350}px)` },
+      { transform: `translateX(${(pos - 1) * -350}px)` }
+    ], {
+        duration: 333,
+        fill: "forwards",
+        easing: "ease-out"
+      })
+
+    rightAnimate.onfinish = function() {
+      console.log("this is over")
+      pos--;
+      running = false;
+    }
+  }
+
+}
