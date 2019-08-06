@@ -55,29 +55,23 @@ body{
 
 .temp{
   text-align: center;
+  position: relative;
   width: 100%;
-  background-color: #eee;
-  color: black;
+  background-color: #888;
+  color: white;
   font-weight: bolder;
   padding: 10px 12px;
-  border: 2.5px black solid;
+  /* border: 2.5px black solid; */
+  transition: all, .5s;
 }
 
 .temp:hover{
   background-color: rgb(94, 228, 252);
-  transform: scale(1.05);
-  transition: all, .25s;
-}
-
-.link:nth-child(2) .temp{
-  border-top: none;
-  border-bottom: none;
-}
-
-.link:nth-child(2) .temp:hover{
-  border-top: 2.5px black solid;
-  border-bottom: 2.5px black solid;
-  transition: all .25s;
+  box-shadow: 5px 5px 5px #333;
+  color: black;
+  transform: scale(1.10);
+  transition: all, .5s;
+  z-index: 10;
 }
 
 .contactLinks{
@@ -91,7 +85,7 @@ body{
 .contactLink{
   color: black;
   margin-top: .5em;
-  background-color: #eee;
+  background-color: white;
   padding: 5px 10px;
   border-radius: 5px;
 }
