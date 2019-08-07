@@ -132,7 +132,7 @@ body{
   right: 0;
   bottom: 0;
   transform-style: preserve-3d;
-  display: grid;
+  /* display: grid; */
 }
 
 .contentFront{
@@ -178,4 +178,13 @@ body{
 .rightMover{
   right: 0%;
   z-index: 10;
+}
+
+/* Portfolio */
+
+.portPic{
+  width: 250px;
+  height: auto;
+  display: block;
+  margin: auto;
 }
