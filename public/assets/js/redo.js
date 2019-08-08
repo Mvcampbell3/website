@@ -109,7 +109,12 @@ function transitionPages(currentPage, nextPage) {
 
   firstAnimation.onfinish = () => {
     endFirstAnimate(currentPage);
-    nextPage.style.display = "block";
+    console.log(nextPage.id);
+    if (nextPage.id === "portfolioPage") {
+      nextPage.style.display = "grid";
+    } else {
+      nextPage.style.display = "block";
+    }
     const secondAnimation = nextPage.animate([
       { transform: 'translate(300px, 1000px) rotateZ(-60deg)' },
       { transform: 'translate(0px, 0px) rotateZ(0deg)' }

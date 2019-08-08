@@ -7,6 +7,10 @@ router.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "/index.html"));
 })
 
+router.get("/redo", (req,res) => {
+  res.sendFile(path.join(__dirname, "/redo.html"))
+})
+
 router.get("/secret", (req,res) => {
   res.sendFile("secret")
 })

@@ -31,6 +31,8 @@ body{
   border-right: .5px black solid;
 }
 
+/* Left Side Nav CSS */
+
 .leftWrap{
   display: grid;
   grid-template-columns: 1fr;
@@ -120,8 +122,74 @@ body{
 
 .page{
   width: 90%;
-  margin: auto;
+  margin: 0 auto;
 }
+
+/* Single Box CSS */
+
+.singleBox{
+  position: relative;
+  width: 50%;
+  left: 25%;
+  top: -100px;
+  border-radius: 15px;
+  background-color: rgba(255, 253, 253, 0.486);
+  box-shadow: 15px 15px 15px #333;
+  transition: box-shadow 1.5s, transform 1.5s;
+  transform-style: preserve-3d;
+  text-align: center;
+}
+
+.homeAbout:hover .singleBox{
+  box-shadow: -15px 15px 15px #333;
+  transform: rotateY(180deg);
+  transition: box-shadow 1.5s, transform 1.5s;
+}
+
+.singleFront, .singleBack{
+  cursor: default;
+  position: absolute;
+  /* padding: 10px; */
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+.singleFront{
+  background-color: rgba(255, 255, 255, 0.863);
+  color: rgb(0, 65, 73);
+  height: 30px;
+  padding: 20px 10px;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  width: 260px;
+  left: calc(50% - 130px);
+}
+
+.singleBack{
+  width: 400px;
+  left: calc(50% - 200px);
+  transform: rotateY(180deg);
+  background-color: rgba(0, 65, 73, 0.918);
+  color: white;
+  border-radius: 5px;
+  top: -50px;
+}
+
+.singleTextFront{
+  padding: 10px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.singleTextBack{
+  padding: 5px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Content Box for Portfolio Cards */
 
 .contentBox{
   height: 500px;
@@ -163,6 +231,14 @@ body{
   background-color: rgba(238, 238, 238, 0.589);
 }
 
+#portfolioPage{
+  width: fit-content;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 40px 695px 10px;
+  grid-column-gap: 15px;
+}
+
 .projectHolder{
   display: flex;
   position: relative;
@@ -178,7 +254,7 @@ body{
 }
 
 .mover{
-  position: absolute;
+  position: relative;
   height: 40px;
   width: 40px;
   top: calc(50% - 20px);
@@ -266,4 +342,16 @@ body{
 .btnLink:hover{
   background-color: dodgerblue;
   transition: all, .25s;
+}
+
+/* Media Queries */
+
+@media (max-width: 1200px) {
+  #portfolioPage{
+    grid-template-columns: 40px 375px 10px;
+  }
+
+  .portfolio{
+    width: 335px;
+  }
 }
