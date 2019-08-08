@@ -53,7 +53,8 @@ body{
   margin: 0 auto;
 }
 
-.temp{
+.link{
+  user-select: none;
   text-align: center;
   position: relative;
   width: 100%;
@@ -61,17 +62,29 @@ body{
   color: white;
   font-weight: bolder;
   padding: 10px 12px;
+  cursor: pointer;
   /* border: 2.5px black solid; */
   transition: all, .5s;
 }
 
-.temp:hover{
+.link:hover{
   background-color: rgb(94, 228, 252);
   box-shadow: 5px 5px 5px #333;
   color: black;
   transform: scale(1.10);
   transition: all, .5s;
   z-index: 10;
+}
+
+.link:active{
+  background-color: #333;
+  color: rgb(94, 228, 252);
+  transform: scale(.90);
+}
+
+.currentPage{
+  background-color: rgb(172, 242, 255);
+  color: black;
 }
 
 .contactLinks{
@@ -97,12 +110,17 @@ body{
 .rightSide{
   display: grid;
   grid-template-columns: 1fr;
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
   justify-content: space-evenly;
   position: relative;
   align-items: center;
   overflow: hidden;
+}
+
+.page{
+  width: 90%;
+  margin: auto;
 }
 
 .contentBox{

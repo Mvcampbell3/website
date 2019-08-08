@@ -19,13 +19,13 @@
           <h3 class="name">Michael Campbell</h3>
         </div>
         <div class="linkSection">
-          <div class="link">
+          <div class="link currentPage" id="homeLink" data-which="homePage">
             <p class="temp changeBorder" id="topLink">Home</p>
           </div>
-          <div class="link">
+          <div class="link" id="portfolioLink" data-which="portfolioPage">
             <p class="temp" id="middleLink">Portfolio</p>
           </div>
-          <div class="link">
+          <div class="link" id="contactLink" data-which="contactPage">
             <p class="temp changeBorder" id="bottomLink">Contact</p>
           </div>
         </div>
@@ -41,7 +41,7 @@
 
       <!-- Content -->
       <!-- Need to change the HTML for the first page -->
-      <div id="firstPage">
+      <div id="homePage" class="page">
         <div class="content">
           <div class="contentBox">
             <div class="contentFront">
@@ -56,12 +56,9 @@
         </div>
       </div>
       <!-- Content End -->
-      <div class="secondPage" id="secondPage">
+      <div class="page" id="portfolioPage">
         <div class="mover leftMover" id="leftMover">
           <i class="fas fa-arrow-circle-left"></i>
-        </div>
-        <div class="mover rightMover" id="rightMover">
-          <i class="fas fa-arrow-circle-right"></i>
         </div>
         <div id="portfolio" class="portfolio">
           <div class="projectHolder" id="projectHolder">
@@ -110,7 +107,8 @@
                   <p class="contentTitle">Skyrim Memory Game</p>
                   <img src="assets/images/skyrimstill.png" alt="skyrim" class="portPic">
                   <p class="contentText">Skyrim Memory Game is a React app that tests the players memory. Scores are
-                    based on number of correct guesses made in a row. A player wins the game by correctly clicking on all of
+                    based on number of correct guesses made in a row. A player wins the game by correctly clicking on
+                    all of
                     the characters without clicking a duplicate.</p>
                 </div>
                 <div class="contentBack">
@@ -129,7 +127,8 @@
                   <p class="contentTitle">Stardew Valley Match Maker</p>
                   <img src="assets/images/stardewPic.png" alt="stardew" class="portPic">
                   <p class="contentText">This Express app is based on the video game Stardew Valley. You take a survey
-                    to see which player from the game you should marry. Since there is online multiplayer, you will also be
+                    to see which player from the game you should marry. Since there is online multiplayer, you will also
+                    be
                     tested against people who have already taken it. Good Luck!</p>
                 </div>
                 <div class="contentBack">
@@ -167,13 +166,19 @@
               </div>
             </div>
           </div>
-
+        </div>
+        <div class="mover rightMover" id="rightMover">
+          <i class="fas fa-arrow-circle-right"></i>
         </div>
       </div>
       <!-- End of portfolio page -->
       <!-- Contact Page -->
-      <div id="thirdPage" class="thirdPage">
-
+      <div id="contactPage" class="page">
+        <div class="content">
+          <div class="contentFront">
+            This is the contact page
+          </div>
+        </div>
       </div>
 
     </div>

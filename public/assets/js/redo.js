@@ -27,7 +27,6 @@ function moveLeft() {
       running = false;
     }
   }
-
 }
 
 function moveRight() {
@@ -54,34 +53,38 @@ function moveRight() {
 
 // this is how we are going to animate that 'spinning wheel' effect
 
-const firstPage = document.getElementById("firstPage");
-const secondPage = document.getElementById("secondPage");
+const homeLink = document.getElementById("homeLink");
+const portfolioLink = document.getElementById("portfolioLink");
+const contactLink = document.getElementById("contactLink");
 
-// setTimeout(function() {
-//   const firstAnimation = firstPage.animate([
-//     { transform: 'translate(0px, 0px) rotateZ(0deg)' },
-//     { transform: 'translate(300px, -1000px) rotateZ(60deg)' }
-//   ],
-//     {
-//       duration: 1250,
-//       fill: "forwards",
-//       easing: "ease-in-out"
-//     })
+const homePage = document.getElementById("homePage");
+const portfolioPage = document.getElementById("portfolioPage");
+const contactPage = document.getElementById("contactPage");
 
-//   firstAnimation.onfinish = () => testAnimate(firstPage);
-// }, 3000)
+let currentPage = homeLink;
+let runningAnimation = false;
 
-// setTimeout(function() {
-//   secondPage.style.display = "block";
-//   secondPage.animate([
-//     { transform: 'translate(300px, 1000px) rotateZ(-60deg)' },
-//     { transform: 'translate(0px, 0px) rotateZ(0deg)' }
-//   ], {
-//       duration: 1250,
-//       fill: "forwards",
-//       easing: "cubic-bezier(0.175, 0.885, 0.32, 1.175)"
-//     })
-// }, 6000)
+const linkBtns = [homeLink, portfolioLink, contactLink];
+linkBtns.forEach(linkBtn => {
+
+  linkBtn.addEventListener("click", function() {
+    if (!runningAnimation) {
+      runningAnimation = true;
+      linkBtns.forEach(linkBtn => linkBtn.classList.remove("currentPage"));
+      this.classList.add("currentPage");
+      if (currentPage === this) {
+        console.log("same page");
+        runningAnimation = false;
+        return;
+      } else {
+        console.log("different page")
+        transitionPages(document.getElementById(currentPage.dataset.which), document.getElementById(this.dataset.which));
+        currentPage = this;
+      }
+    }
+  })
+})
+
 
 function endFirstAnimate(elem) {
   console.log("first animation is finished")
@@ -90,6 +93,7 @@ function endFirstAnimate(elem) {
 
 function endSecondAnimate(elem) {
   console.log("second animation is finished")
+  runningAnimation = false;
 }
 
 function transitionPages(currentPage, nextPage) {
@@ -119,6 +123,8 @@ function transitionPages(currentPage, nextPage) {
   };
 }
 
-// setTimeout(function(){
-//   transitionPages(firstPage, secondPage)
-// }, 2000)
+function testAnimation() {
+  setTimeout(function() {
+    transitionPages(firstPage, secondPage)
+  }, 2000)
+}

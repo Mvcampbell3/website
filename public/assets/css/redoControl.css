@@ -1,11 +1,17 @@
-#firstPage{
-  display: none;
+#homePage{
+  /* display: none; */
+  position: relative;
+  z-index: 15;
 }
 
-#secondPage{
+#portfolioPage{
   display: none;
+  position: relative;
+  z-index: 15;
 }
 
-#thirdPage{
+#contactPage{
   display: none;
+  position: relative;
+  z-index: 15;
 }
