@@ -51,3 +51,32 @@ function moveRight() {
   }
 
 }
+
+// this is how we are going to animate that 'spinning wheel' effect
+
+const secondPage = document.getElementById("secondPage");
+const content = document.getElementById("content")
+const allMovers = [secondPage, leftMover, rightMover];
+
+setTimeout(function() {
+  secondPage.animate([
+    { transform: 'translate(0px, 0px) rotateZ(0deg)' },
+    { transform: 'translate(300px, -1000px) rotateZ(60deg)' }
+  ],
+    {
+      duration: 1250,
+      fill: "forwards",
+      easing: "ease-in-out"
+    })
+}, 3000)
+
+setTimeout(function(){
+    secondPage.animate([
+      {transform: 'translate(300px, 1000px) rotateZ(-60deg)'},
+      {transform: 'translate(0px, 0px) rotateZ(0deg)'}
+    ], {
+      duration: 1250,
+      fill: "forwards",
+      easing: "cubic-bezier(0.175, 0.885, 0.32, 1.175)"
+    })
+}, 6000)
