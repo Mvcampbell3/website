@@ -54,12 +54,11 @@ function moveRight() {
 
 // this is how we are going to animate that 'spinning wheel' effect
 
+const firstPage = document.getElementById("firstPage");
 const secondPage = document.getElementById("secondPage");
-const content = document.getElementById("content")
-const allMovers = [secondPage, leftMover, rightMover];
 
 setTimeout(function() {
-  secondPage.animate([
+  const firstAnimation = firstPage.animate([
     { transform: 'translate(0px, 0px) rotateZ(0deg)' },
     { transform: 'translate(300px, -1000px) rotateZ(60deg)' }
   ],
@@ -68,9 +67,12 @@ setTimeout(function() {
       fill: "forwards",
       easing: "ease-in-out"
     })
+
+  firstAnimation.onfinish = () => testAnimate(firstPage);
 }, 3000)
 
 setTimeout(function(){
+    secondPage.style.display = "block";
     secondPage.animate([
       {transform: 'translate(300px, 1000px) rotateZ(-60deg)'},
       {transform: 'translate(0px, 0px) rotateZ(0deg)'}
@@ -80,3 +82,8 @@ setTimeout(function(){
       easing: "cubic-bezier(0.175, 0.885, 0.32, 1.175)"
     })
 }, 6000)
+
+function testAnimate(elem) {
+  console.log("this is finished")
+  elem.style.display = "none";
+}
