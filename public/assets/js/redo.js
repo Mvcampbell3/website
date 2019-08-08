@@ -57,33 +57,68 @@ function moveRight() {
 const firstPage = document.getElementById("firstPage");
 const secondPage = document.getElementById("secondPage");
 
-setTimeout(function() {
-  const firstAnimation = firstPage.animate([
+// setTimeout(function() {
+//   const firstAnimation = firstPage.animate([
+//     { transform: 'translate(0px, 0px) rotateZ(0deg)' },
+//     { transform: 'translate(300px, -1000px) rotateZ(60deg)' }
+//   ],
+//     {
+//       duration: 1250,
+//       fill: "forwards",
+//       easing: "ease-in-out"
+//     })
+
+//   firstAnimation.onfinish = () => testAnimate(firstPage);
+// }, 3000)
+
+// setTimeout(function() {
+//   secondPage.style.display = "block";
+//   secondPage.animate([
+//     { transform: 'translate(300px, 1000px) rotateZ(-60deg)' },
+//     { transform: 'translate(0px, 0px) rotateZ(0deg)' }
+//   ], {
+//       duration: 1250,
+//       fill: "forwards",
+//       easing: "cubic-bezier(0.175, 0.885, 0.32, 1.175)"
+//     })
+// }, 6000)
+
+function endFirstAnimate(elem) {
+  console.log("first animation is finished")
+  elem.style.display = "none";
+}
+
+function endSecondAnimate(elem) {
+  console.log("second animation is finished")
+}
+
+function transitionPages(currentPage, nextPage) {
+  const firstAnimation = currentPage.animate([
     { transform: 'translate(0px, 0px) rotateZ(0deg)' },
     { transform: 'translate(300px, -1000px) rotateZ(60deg)' }
   ],
     {
-      duration: 1250,
+      duration: 800,
       fill: "forwards",
       easing: "ease-in-out"
-    })
+    });
 
-  firstAnimation.onfinish = () => testAnimate(firstPage);
-}, 3000)
-
-setTimeout(function(){
-    secondPage.style.display = "block";
-    secondPage.animate([
-      {transform: 'translate(300px, 1000px) rotateZ(-60deg)'},
-      {transform: 'translate(0px, 0px) rotateZ(0deg)'}
+  firstAnimation.onfinish = () => {
+    endFirstAnimate(currentPage);
+    nextPage.style.display = "block";
+    const secondAnimation = nextPage.animate([
+      { transform: 'translate(300px, 1000px) rotateZ(-60deg)' },
+      { transform: 'translate(0px, 0px) rotateZ(0deg)' }
     ], {
-      duration: 1250,
-      fill: "forwards",
-      easing: "cubic-bezier(0.175, 0.885, 0.32, 1.175)"
-    })
-}, 6000)
+        duration: 800,
+        fill: "forwards",
+        easing: "cubic-bezier(0.175, 0.885, 0.32, 1.175)"
+      });
 
-function testAnimate(elem) {
-  console.log("this is finished")
-  elem.style.display = "none";
+    secondAnimation.onfinish = endSecondAnimate(nextPage)
+  };
 }
+
+// setTimeout(function(){
+//   transitionPages(firstPage, secondPage)
+// }, 2000)

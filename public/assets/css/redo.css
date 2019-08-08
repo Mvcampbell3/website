@@ -145,10 +145,6 @@ body{
   background-color: rgba(238, 238, 238, 0.589);
 }
 
-/* #firstPage{
-  display: none;
-} */
-
 .projectHolder{
   display: flex;
   position: relative;
@@ -203,11 +199,6 @@ body{
 
 .portfolio{
   position: relative;
-  /* display: none; */
-}
-
-.secondPage{
-  display: none;
 }
 
 .portPic{
