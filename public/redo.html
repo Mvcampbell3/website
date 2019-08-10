@@ -9,6 +9,8 @@
   <script src="https://kit.fontawesome.com/00fdae5f8b.js"></script>
   <link rel="stylesheet" href="assets/css/redo.css">
   <link rel="stylesheet" href="assets/css/redoControl.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -28,34 +30,37 @@
           <div class="link" id="contactLink" data-which="contactPage">
             <p class="temp changeBorder" id="bottomLink">Contact</p>
           </div>
-        </div>
-
-        <div class="somthing">
 
         </div>
+
+        <div class="spaceHolder"></div>
 
       </div>
     </div>
     <div class="rightSide">
 
 
-      <!-- Content -->
-      <!-- Need to change the HTML for the first page -->
+      <!-- Home Page -->
       <div id="homePage" class="page">
-        <div class="homeAbout">
-          <div class="singleBox">
-            <div class="singleFront">
-              <p class="singleTextFront">Web Developer</p>
-            </div>
-            <div class="singleBack">
-              <p class="singleTextBack">Graduate</p>
-              <p class="singleTextBack">UCF Full Stack Coding Boot Camp</p>
-              <p class="singleTextBack">HTML, CSS, Javascript, jQuery, Node.js, Express, React, MongoDB, MySql</p>
+        <div class="pageHolder">
+          <div class="boxHolder">
+            <div class="homeAbout">
+              <div class="singleBox">
+                <div class="singleFront">
+                  <p class="singleTextFront">Web Developer</p>
+                </div>
+                <div class="singleBack">
+                  <p class="singleTextBack">Graduate</p>
+                  <p class="singleTextBack">UCF Full Stack Coding Boot Camp</p>
+                  <p class="singleTextBack">HTML, CSS, Javascript, jQuery, Node.js, Express, React, MongoDB, MySql</p>
+                </div>
+              </div>
             </div>
           </div>
+
         </div>
       </div>
-      <!-- Content End -->
+      <!-- Home End -->
       <div class="page" id="portfolioPage">
         <div class="mover leftMover" id="leftMover">
           <i class="fas fa-arrow-circle-left"></i>
@@ -172,36 +177,58 @@
         </div>
       </div>
       <!-- End of portfolio page -->
+
       <!-- Contact Page -->
       <div id="contactPage" class="page">
-        <div class="contactBox" id="contactBox">
-          <div class="contactBoxFront">
-            <h2 class="contactName">Michael Campbell</h2>
-            <ul class="contactList">
-              <li class="contactLI">
-                <a href="https://github.com/Mvcampbell3" target="_blank" class="contackA">
-                  <i class="linksAWE fab fa-github"></i>
-                </a>
-              </li>
-              <li class="contactLI">
-                <a href="https://www.linkedin.com/in/mvcampbell3/" target="_blank" class="contackA">
-                  <i class="linksAWE fab fa-linkedin"></i>
-                </a>
-              </li>
-              <li class="contactLI">
-                <a href="mailto: mvcampbell3@gmail.com">
-                  <i class="linksAWE marginRight fas fa-envelope-square"></i>mvcampbell3@gmail.com
-                </a>
-              </li>
-              <li class="contactLI bottomLI">
-                <button class="leaveMessage">Leave Message</button>
-              </li>
-            </ul>
+        <div class="pageHolder">
+          <div class="contactBox" id="contactBox">
+            <div class="contactBoxFront">
+              <h2 class="contactName">Michael Campbell</h2>
+              <ul class="contactList">
+                <li class="contactLI">
+                  <a href="https://github.com/Mvcampbell3" target="_blank" class="contackA">
+                    <i class="linksAWE fab fa-github"></i>
+                  </a>
+                </li>
+                <li class="contactLI">
+                  <a href="https://www.linkedin.com/in/mvcampbell3/" target="_blank" class="contackA">
+                    <i class="linksAWE fab fa-linkedin"></i>
+                  </a>
+                </li>
+                <li class="contactLI">
+                  <a href="mailto: mvcampbell3@gmail.com">
+                    <i class="linksAWE marginRight fas fa-envelope-square"></i>mvcampbell3@gmail.com
+                  </a>
+                </li>
+                <li class="contactLI bottomLI">
+                  <button class="leaveMessage" id="leaveBtn">Leave Message</button>
+                </li>
+              </ul>
+            </div>
+            <div class="contactBoxBack">
+              <div class="contactBackWrap">
+                <div class="inputGroup">
+                  <label for="name" class="nameLabel">Name</label>
+                  <input class="inputInfo" type="text" name="name" id="nameInput">
+                </div>
+                <div class="inputGroup">
+                  <label for="email" class="emailLabel">Email</label>
+                  <input class="inputInfo" type="email" name="email" id="emailInput">
+                </div>
+                <div class="inputGroup">
+                  <label for="message">Message</label>
+                  <textarea class="message" name="message" id="messageInput"></textarea>
+                </div>
+
+                <div class="buttonArea">
+                  <button class="leaveMessage" id="subContact">Send</button>
+                  <button class="leaveMessage" id="leaveBtn2">Back</button>
+                </div>
 
 
-
+              </div>
+            </div>
           </div>
-          <div class="contactBoxBack"></div>
         </div>
       </div>
 

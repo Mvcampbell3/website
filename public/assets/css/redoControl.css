@@ -2,16 +2,19 @@
   display: none;
   position: relative;
   z-index: 15;
+  height: 100%;
 }
 
 #portfolioPage{
   display: none;
+  height: 100%;
   position: relative;
   z-index: 15;
 }
 
 #contactPage{
   /* display: none; */
+  height: 100%;
   position: relative;
   z-index: 15;
 }

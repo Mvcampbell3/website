@@ -135,11 +135,64 @@ function testAnimation() {
 }
 
 const contactBox = document.getElementById("contactBox")
+const leaveBtn = document.getElementById("leaveBtn");
+const leaveBtn2 = document.getElementById("leaveBtn2");
 
-function testContact() {
-  setTimeout(function(){
-    contactBox.classList.add("flipContact");
-  }, 1000)
+function flipContact() {
+  contactBox.animate([
+    { transform: 'rotateY(0deg)' },
+    { transform: 'rotateY(180deg)' }
+  ], {
+      duration: 500,
+      fill: "forwards"
+    })
 }
 
-testContact();
+function flipContact2() {
+  console.log("flip back")
+  contactBox.animate([
+    { transform: 'rotateY(180deg)' },
+    { transform: 'rotateY(0deg)' }
+  ], {
+      duration: 500,
+      fill: "forwards"
+    })
+}
+
+leaveBtn.addEventListener("click", flipContact)
+leaveBtn2.addEventListener("click", flipContact2)
+
+const nameInput = document.getElementById("nameInput");
+const emailInput = document.getElementById("emailInput");
+const messageInput = document.getElementById("messageInput");
+const sendBtn = document.getElementById("subContact")
+
+function getMessage() {
+  const name = nameInput.value.trim();
+  const email = emailInput.value.trim();
+  const message = messageInput.value.trim();
+  console.log(name, email, message);
+
+  if (email && name && message) {
+    let sendObj = {
+      name: name,
+      email: email,
+      text: message
+    }
+    console.log(sendObj);
+    $.ajax("/api/message", {
+      type: "POST",
+      data: sendObj
+    }).then(result => {
+      console.log(result);
+      const clearInputs = [nameInput, emailInput, messageInput];
+      clearInputs.forEach(one => one.value = "");
+      flipContact2();
+      alert("Message received!, Thank you!");
+    })
+  } else {
+    alert("Please fill in all inputs, Thank you!")
+  }
+}
+
+sendBtn.addEventListener("click", getMessage);
