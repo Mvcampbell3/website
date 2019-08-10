@@ -370,12 +370,11 @@ body{
 }
 
 .contactBoxFront{
-  background-color: rgba(255, 255, 255, .875);
+  background-color: rgba(255, 255, 255, .950);
   position: absolute;
   display: flex;
   flex-direction: column;
   width: 350px;
-  /* height: 195.6px; */
   text-align: center;
   backface-visibility: hidden;
   border-radius: 15px;
@@ -387,7 +386,7 @@ body{
   width: 350px;
   top: -112.2px;
   position: absolute;
-  background-color: rgba(255, 255, 255, .875);
+  background-color: rgba(255, 255, 255, .950);
   backface-visibility: hidden;
   transform: rotateY(180deg);
   border-radius: 15px;
@@ -412,8 +411,10 @@ body{
   padding: 12px;
   font-size: 16px;
   border: none;
-  border-bottom: 1px black solid;
-  background-color: rgb(210, 210, 210) !important;
+  border-bottom: 1px rgb(0, 65, 73) solid;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  /* background-color: rgb(210, 210, 210) !important; */
 }
 
 .inputGroup label{
@@ -422,10 +423,6 @@ body{
 
 .inputInfo:focus{
   outline: none;
-}
-
-.inputInfo:focus{
-  background-color: rgb(225, 225, 225) !important;
 }
 
 .contactList{
@@ -477,11 +474,13 @@ body{
 .message{
   display: block;
   width: 289px;
-  height: 100px;
+  height: 150px;
   font-size: 16px;
   padding: 8px;
-  margin: 2em 0;
-  background-color: rgb(210, 210, 210);
+  margin: 0 0 1.5em 0;
+  /* background-color: rgb(210, 210, 210); */
+  border-radius: 5px;
+  border: rgb(0, 65, 73) 1px solid;
 }
 
 .message:focus{

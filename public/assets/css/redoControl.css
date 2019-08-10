@@ -1,5 +1,5 @@
 #homePage{
-  display: none;
+  /* display: none; */
   position: relative;
   z-index: 15;
   height: 100%;
@@ -13,7 +13,7 @@
 }
 
 #contactPage{
-  /* display: none; */
+  display: none;
   height: 100%;
   position: relative;
   z-index: 15;

@@ -61,7 +61,7 @@ const homePage = document.getElementById("homePage");
 const portfolioPage = document.getElementById("portfolioPage");
 const contactPage = document.getElementById("contactPage");
 
-let currentPage = contactLink;
+let currentPage = homeLink;
 let runningAnimation = false;
 
 const linkBtns = [homeLink, portfolioLink, contactLink];
