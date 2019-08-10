@@ -61,7 +61,7 @@ const homePage = document.getElementById("homePage");
 const portfolioPage = document.getElementById("portfolioPage");
 const contactPage = document.getElementById("contactPage");
 
-let currentPage = homeLink;
+let currentPage = contactLink;
 let runningAnimation = false;
 
 const linkBtns = [homeLink, portfolioLink, contactLink];
@@ -133,3 +133,13 @@ function testAnimation() {
     transitionPages(firstPage, secondPage)
   }, 2000)
 }
+
+const contactBox = document.getElementById("contactBox")
+
+function testContact() {
+  setTimeout(function(){
+    contactBox.classList.add("flipContact");
+  }, 1000)
+}
+
+testContact();
