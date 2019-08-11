@@ -208,40 +208,47 @@ const mobileFlipBtns = [].slice.call(document.querySelectorAll(".mobileFlipBtn")
 console.log(mobileFlipBtns)
 
 mobileFlipBtns.forEach(btn => {
-  btn.addEventListener("touchstart", function() {
-    const sub = this.dataset.sub;
-    console.log(sub)
-    const flipElem = this.dataset.sub === "false" ? this.parentElement.parentElement : this.parentElement.parentElement.parentElement;
-    // console.log(this.parentElement.parentElement);
-    // const flipElem = this.parentElement.parentElement;
-    console.log(flipElem)
-    const flipped = flipElem.dataset.flipped;
-    console.log(flipped);
-    let start = 0;
-    let finish = 180;
-    if (flipped === "false") {
-      console.log("This is not yet flipped");
-    } else {
-      start = 180;
-      finish = 0;
-    }
-
-    const flipAnimation = flipElem.animate([
-      { transform: `rotateY(${start}deg)` },
-      { transform: `rotateY(${finish}deg)` }
-    ], {
-        duration: 500,
-        fill: 'forwards'
-      })
-
-    flipAnimation.onfinish = function() {
-      console.log("animation finished")
-      console.log(flipElem.dataset.flipped)
-      if (flipElem.dataset.flipped === "false") {
-        flipElem.dataset.flipped = "true"
-      } else {
-        flipElem.dataset.flipped = "false";
-      }
-    }
-  })
+  btn.addEventListener("touchstart", handleMobileFlip);
+  btn.addEventListener("click", handleMobileFlip)
 })
+
+function handleMobileFlip() {
+  const sub = this.dataset.sub;
+  console.log(sub)
+  const flipElem = this.dataset.sub === "false" ? this.parentElement.parentElement : this.parentElement.parentElement.parentElement;
+  // console.log(this.parentElement.parentElement);
+  // const flipElem = this.parentElement.parentElement;
+  console.log(flipElem)
+  const flipped = flipElem.dataset.flipped;
+  console.log(flipped);
+  let start = 0;
+  let finish = 180;
+  let shadowStart = "15px 15px 15px #333";
+  let shadowFinish = "-15px 15px 15px #333";
+  if (flipped === "false") {
+    console.log("This is not yet flipped");
+  } else {
+    start = 180;
+    finish = 0;
+    shadowStart = "-15px 15px 15px #333";
+    shadowFinish = "15px 15px 15px #333"
+  }
+
+  const flipAnimation = flipElem.animate({
+    transform: [`rotateY(${start}deg)`, `rotateY(${finish}deg)`],
+    boxShadow: [shadowStart, shadowFinish]
+  }, {
+      duration: 500,
+      fill: 'forwards'
+    })
+
+  flipAnimation.onfinish = function() {
+    console.log("animation finished")
+    console.log(flipElem.dataset.flipped)
+    if (flipElem.dataset.flipped === "false") {
+      flipElem.dataset.flipped = "true"
+    } else {
+      flipElem.dataset.flipped = "false";
+    }
+  }
+}

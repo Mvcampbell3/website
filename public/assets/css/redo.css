@@ -615,5 +615,6 @@ body{
 
   .content:hover .contentBox{
     transform: none;
+    box-shadow: 15px 15px 15px #333;
   }
 }
