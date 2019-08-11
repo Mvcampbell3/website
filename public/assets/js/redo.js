@@ -6,7 +6,9 @@ let pos = 0;
 let running = false;
 
 leftMover.addEventListener("click", moveRight);
+leftMover.addEventListener("touchstart", moveRight);
 rightMover.addEventListener("click", moveLeft);
+rightMover.addEventListener("touchstart", moveLeft);
 
 function moveLeft() {
   if (!running) {
@@ -66,24 +68,26 @@ let runningAnimation = false;
 
 const linkBtns = [homeLink, portfolioLink, contactLink];
 linkBtns.forEach(linkBtn => {
-
-  linkBtn.addEventListener("click", function() {
-    if (!runningAnimation) {
-      runningAnimation = true;
-      linkBtns.forEach(linkBtn => linkBtn.classList.remove("currentPage"));
-      this.classList.add("currentPage");
-      if (currentPage === this) {
-        console.log("same page");
-        runningAnimation = false;
-        return;
-      } else {
-        console.log("different page")
-        transitionPages(document.getElementById(currentPage.dataset.which), document.getElementById(this.dataset.which));
-        currentPage = this;
-      }
-    }
-  })
+  linkBtn.addEventListener("touchstart", pageAnimation)
+  linkBtn.addEventListener("click", pageAnimation)
 })
+
+function pageAnimation() {
+  if (!runningAnimation) {
+    runningAnimation = true;
+    linkBtns.forEach(linkBtn => linkBtn.classList.remove("currentPage"));
+    this.classList.add("currentPage");
+    if (currentPage === this) {
+      console.log("same page");
+      runningAnimation = false;
+      return;
+    } else {
+      console.log("different page")
+      transitionPages(document.getElementById(currentPage.dataset.which), document.getElementById(this.dataset.which));
+      currentPage = this;
+    }
+  }
+}
 
 
 function endFirstAnimate(elem) {
@@ -160,7 +164,9 @@ function flipContact2() {
 }
 
 leaveBtn.addEventListener("click", flipContact)
+leaveBtn.addEventListener("touchstart", flipContact)
 leaveBtn2.addEventListener("click", flipContact2)
+leaveBtn2.addEventListener("touchstart", flipContact2)
 
 const nameInput = document.getElementById("nameInput");
 const emailInput = document.getElementById("emailInput");
@@ -196,12 +202,13 @@ function getMessage() {
 }
 
 sendBtn.addEventListener("click", getMessage);
+sendBtn.addEventListener("touchstart", getMessage);
 
 const mobileFlipBtns = [].slice.call(document.querySelectorAll(".mobileFlipBtn"));
 console.log(mobileFlipBtns)
 
 mobileFlipBtns.forEach(btn => {
-  btn.addEventListener("click", function() {
+  btn.addEventListener("touchstart", function() {
     const sub = this.dataset.sub;
     console.log(sub)
     const flipElem = this.dataset.sub === "false" ? this.parentElement.parentElement : this.parentElement.parentElement.parentElement;
@@ -220,12 +227,12 @@ mobileFlipBtns.forEach(btn => {
     }
 
     const flipAnimation = flipElem.animate([
-      {transform: `rotateY(${start}deg)`},
-      {transform: `rotateY(${finish}deg)`}
+      { transform: `rotateY(${start}deg)` },
+      { transform: `rotateY(${finish}deg)` }
     ], {
-      duration: 500,
-      fill: 'forwards'
-    })
+        duration: 500,
+        fill: 'forwards'
+      })
 
     flipAnimation.onfinish = function() {
       console.log("animation finished")
