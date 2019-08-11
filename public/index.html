@@ -2,297 +2,253 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Michael Campbell</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/load.css">
-    <link rel="stylesheet" href="assets/css/home.css">
-    <link rel="stylesheet" href="assets/css/clocks.css">
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
-        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="assets/js/app.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Michael Campbell</title>
+  <script src="https://kit.fontawesome.com/00fdae5f8b.js"></script>
+  <link rel="stylesheet" href="assets/css/redo.css">
+  <link rel="stylesheet" href="assets/css/redoControl.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <div class="leftBack" id="leftBack"></div>
-    <div class="rightBack" id="rightBack"></div>
-    <section id="home" class="bg">
-        <div class="placeHolder"></div>
-        <div class="homeHolder">
-            <div class="area">
-                <div class="letterBox">
-                    <div class="letter front m"></div>
-                    <div class="letter front i"></div>
-                    <div class="letter front c"></div>
-                    <div class="letter front h"></div>
-                    <div class="letter front a"></div>
-                    <div class="letter front e"></div>
-                    <div class="letter front l"></div>
-                </div>
-
-                <div class="letterBox backBox">
-                    <div id="first" class="letter back m"></div>
-                    <div id="second" class="letter back i"></div>
-                    <div id="third" class="letter back c"></div>
-                    <div id="fourth" class="letter back h"></div>
-                    <div id="fifth" class="letter back a"></div>
-                    <div class="letter back e"></div>
-                    <div id="last" class="letter back l"></div>
-
-                </div>
-            </div>
-            <p class="aboutContent">
-                I am web devloper who recently graduated from the UCF Fullstack Coding Bootcamp. I love to create great
-                looking websites that are highly functional and useful. The languages which I am strong at are HTML,
-                CSS, and Javascript. I have experience using both SQL and non-SQL databases. Some of the technologies
-                that I use to make
-                websites include React, Node.js, Express, MongoDB, and MySql.
-            </p>
+  <div class="container">
+    <div class="leftSide">
+      <div class="leftWrap">
+        <div class="top">
+          <h3 class="name">Michael Campbell</h3>
         </div>
-        <div class="oldClock" id="oldClock">
-            <div id="firstDigit" class="digit">
-              <div id="digit_1_1" class="digit_1 bar bar1"></div>
-              <div id="digit_1_2" class="digit_1 bar bar2"></div>
-              <div id="digit_1_3" class="digit_1 bar bar3"></div>
-              <div id="digit_1_4" class="digit_1 bar bar4"></div>
-              <div id="digit_1_5" class="digit_1 bar bar5"></div>
-              <div id="digit_1_6" class="digit_1 bar bar6"></div>
-              <div id="digit_1_7" class="digit_1 bar bar7"></div>
-            </div>
-            <div id="secondDigit" class="digit">
-              <div id="digit_2_1" class="digit_2 bar bar1"></div>
-              <div id="digit_2_2" class="digit_2 bar bar2"></div>
-              <div id="digit_2_3" class="digit_2 bar bar3"></div>
-              <div id="digit_2_4" class="digit_2 bar bar4"></div>
-              <div id="digit_2_5" class="digit_2 bar bar5"></div>
-              <div id="digit_2_6" class="digit_2 bar bar6"></div>
-              <div id="digit_2_7" class="digit_2 bar bar7"></div>
-            </div>
-            <div class="seperator">
-              <div class="circle"></div>
-              <div class="circle"></div>
-            </div>
-            <div id="thirdDigit" class="digit">
-              <div id="digit_3_1" class="digit_3 bar bar1"></div>
-              <div id="digit_3_2" class="digit_3 bar bar2"></div>
-              <div id="digit_3_3" class="digit_3 bar bar3"></div>
-              <div id="digit_3_4" class="digit_3 bar bar4"></div>
-              <div id="digit_3_5" class="digit_3 bar bar5"></div>
-              <div id="digit_3_6" class="digit_3 bar bar6"></div>
-              <div id="digit_3_7" class="digit_3 bar bar7"></div>
-            </div>
-            <div id="fourthDigit" class="digit">
-              <div id="digit_4_1" class="digit_4 bar bar1"></div>
-              <div id="digit_4_2" class="digit_4 bar bar2"></div>
-              <div id="digit_4_3" class="digit_4 bar bar3"></div>
-              <div id="digit_4_4" class="digit_4 bar bar4"></div>
-              <div id="digit_4_5" class="digit_4 bar bar5"></div>
-              <div id="digit_4_6" class="digit_4 bar bar6"></div>
-              <div id="digit_4_7" class="digit_4 bar bar7"></div>
-            </div>
-            <div class="seperator">
-              <div class="circle"></div>
-              <div class="circle"></div>
-            </div>
-            <div id="fifthDigit" class="digit">
-              <div id="digit_5_1" class="digit_5 bar bar1"></div>
-              <div id="digit_5_2" class="digit_5 bar bar2"></div>
-              <div id="digit_5_3" class="digit_5 bar bar3"></div>
-              <div id="digit_5_4" class="digit_5 bar bar4"></div>
-              <div id="digit_5_5" class="digit_5 bar bar5"></div>
-              <div id="digit_5_6" class="digit_5 bar bar6"></div>
-              <div id="digit_5_7" class="digit_5 bar bar7"></div>
-            </div>
-            <div id="sixthDigit" class="digit">
-              <div id="digit_6_1" class="digit_6 bar bar1"></div>
-              <div id="digit_6_2" class="digit_6 bar bar2"></div>
-              <div id="digit_6_3" class="digit_6 bar bar3"></div>
-              <div id="digit_6_4" class="digit_6 bar bar4"></div>
-              <div id="digit_6_5" class="digit_6 bar bar5"></div>
-              <div id="digit_6_6" class="digit_6 bar bar6"></div>
-              <div id="digit_6_7" class="digit_6 bar bar7"></div>
+        <div class="linkSection">
+          <div class="link currentPage" id="homeLink" data-which="homePage">
+            <p class="temp changeBorder" id="topLink">Home</p>
+          </div>
+          <div class="link" id="portfolioLink" data-which="portfolioPage">
+            <p class="temp" id="middleLink">Portfolio</p>
+          </div>
+          <div class="link" id="contactLink" data-which="contactPage">
+            <p class="temp changeBorder" id="bottomLink">Contact</p>
+          </div>
+
+        </div>
+
+        <div class="spaceHolder"></div>
+
+      </div>
+    </div>
+    <div class="rightSide">
+
+
+      <!-- Home Page -->
+      <div id="homePage" class="page">
+        <div class="pageHolder">
+          <div class="boxHolder">
+            <div class="homeAbout">
+              <div class="singleBox">
+                <div class="singleFront">
+                  <p class="singleTextFront">Web Developer</p>
+                </div>
+                <div class="singleBack">
+                  <p class="singleTextBack">Graduate</p>
+                  <p class="singleTextBack">UCF Full Stack Coding Boot Camp</p>
+                  <p class="singleTextBack">HTML, CSS, Javascript, jQuery, Node.js, Express, React, MongoDB, MySql</p>
+                </div>
+              </div>
             </div>
           </div>
-    </section>
 
-    <div class="navBar">
-        <div class="navHolder">
-            <a class="tag there" href="#home">Home</a>
-            <a class="tag" href="#portfolio">Portfolio</a>
-            <a class="tag" href="#contact">Contact</a>
         </div>
+      </div>
+      <!-- Home End -->
+      <div class="page" id="portfolioPage">
+        <div class="mover leftMover" id="leftMover">
+          <i class="fas fa-arrow-circle-left"></i>
+        </div>
+        <div id="portfolio" class="portfolio">
+          <div class="projectHolder" id="projectHolder">
+            <div class="content">
+              <div class="contentBox" data-flipped="false">
+                <div class="contentFront">
+                  <p class="contentTitle">Rover Reddit</p>
+                  <img class="portPic" src="assets/images/rover.png" alt="rover">
+                  <p class="contentText">My Final Project for the Bootcamp, we made an application which leveraged the
+                    Mars Rover Photos API, which has access to over 500,000 pictures, into a interactive social media
+                    hub. Utilizes the MERN stack.</p>
+                  <button class="mobileFlipBtn" data-sub="false">Back</button>
+
+                </div>
+                <div class="contentBack">
+                  <p class="contentTitle">Rover Reddit</p>
+                  <img class="portPic" src="assets/images/rovermove.gif" alt="rover" />
+                  <div class="websiteLinks">
+                    <a href="https://rover-reddit.herokuapp.com/" target="_blank" class="btnLink" id="web">Website</a>
+                    <a href="https://github.com/DavidWeid/Space-Pair-Project" target="_blank" class="btnLink">GitHub</a>
+                    <button class="mobileFlipBtn" data-sub="true">Front</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="content">
+              <div class="contentBox" data-flipped="false">
+                <div class="contentFront">
+                  <p class="contentTitle">Yahtzee</p>
+                  <img id="Pic2" src="assets/images/yahtzee.png" alt="yahtzee" class="portPic">
+                  <p class="contentText">This is a React application which allows the user to play Yahztee. This site
+                    also tracks the scores of logged in users. Have fun rolling the dice! Uses MERN stack.</p>
+                  <button class="mobileFlipBtn" data-sub="false">Back</button>
+
+                </div>
+                <div class="contentBack">
+                  <p class="contentTitle">Yahtzee</p>
+                  <img class="portPic" src="assets/images/yahtzeemove.gif" alt="yahtzee">
+                  <div class="websiteLinks">
+                    <a href="https://yahtzee-react.herokuapp.com/" target="_blank" class="btnLink">Website</a>
+                    <a href="https://github.com/Mvcampbell3/YahtzeeReact" target="_blank" class="btnLink">GitHub</a>
+                    <button class="mobileFlipBtn" data-sub="true">Front</button>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="content">
+              <div class="contentBox" data-flipped="false">
+                <div class="contentFront">
+                  <p class="contentTitle">Skyrim Memory Game</p>
+                  <img src="assets/images/skyrimstill.png" alt="skyrim" class="portPic">
+                  <p class="contentText">Skyrim Memory Game is a React app that tests the players memory. Scores are
+                    based on number of correct guesses made in a row. A player wins the game by correctly clicking on
+                    all of the characters without clicking a duplicate.</p>
+                  <button class="mobileFlipBtn" data-sub="false">Back</button>
+                </div>
+                <div class="contentBack">
+                  <p class="contentTitle">Skyrim Memory Game</p>
+                  <img src="assets/images/skyrimmove2.gif" alt="skyrim" class="portPic">
+                  <div class="websiteLinks">
+                    <a href="https://skyrim-clickgame.herokuapp.com/" target="_blank" class="btnLink">Website</a>
+                    <a href="https://github.com/Mvcampbell3/clickgame" target="_blank" class="btnLink">GitHub</a>
+                    <button class="mobileFlipBtn" data-sub="true">Front</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="content">
+              <div class="contentBox" data-flipped="false">
+                <div class="contentFront">
+                  <p class="contentTitle">Stardew Valley Match Maker</p>
+                  <img src="assets/images/stardewPic.png" alt="stardew" class="portPic">
+                  <p class="contentText">This Express app is based on the video game Stardew Valley. You take a survey
+                    to see which player from the game you should marry. Since there is online multiplayer, you will also
+                    be tested against people who have already taken it. Good Luck!</p>
+                  <button class="mobileFlipBtn" data-sub="false">Back</button>
+
+                </div>
+                <div class="contentBack">
+                  <p class="contentTitle">Stardew Valley Match Maker</p>
+                  <img src="assets/images/stardewSmall.gif" alt="stardew" class="portPic">
+                  <div class="websiteLinks">
+                    <a href="https://secret-temple-27121.herokuapp.com/" target="_blank" class="btnLink"
+                      id="web">Website</a>
+                    <a href="https://github.com/Mvcampbell3/friend_finder" target="_blank"
+                      class="btnLink marginTop">Github</a>
+                    <button class="mobileFlipBtn" data-sub="true">Front</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="content">
+              <div class="contentBox" data-flipped="false">
+                <div class="contentFront">
+                  <p class="contentTitle">Space Scrape</p>
+                  <img src="assets/images/spacescrapestill.png" alt="space scrape" class="portPic">
+                  <p class="contentText">This is an Express app that scrapes space stories from the website
+                    space.com/news. Users can also comment on the articles. Uses Axios and Cheerio, Express, Node.js,
+                    and Handlebars.</p>
+                  <button class="mobileFlipBtn" data-sub="false">Back</button>
+
+                </div>
+                <div class="contentBack">
+                  <p class="contentTitle">Space Scrape</p>
+                  <img src="assets/images/spacemove.gif" alt="space scrape gif" class="portPic">
+                  <div class="websiteLinks">
+                    <a href="https://frozen-ravine-29791.herokuapp.com/" target="_blank" class="btnLink"
+                      id="web">Website</a>
+                    <a href="https://github.com/Mvcampbell3/scraper3000" target="_blank"
+                      class="btnLink marginTop">Github</a>
+                    <button class="mobileFlipBtn" data-sub="true">Front</button>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mover rightMover" id="rightMover">
+          <i class="fas fa-arrow-circle-right"></i>
+        </div>
+      </div>
+      <!-- End of portfolio page -->
+
+      <!-- Contact Page -->
+      <div id="contactPage" class="page">
+        <div class="pageHolder">
+          <div class="contactBox" id="contactBox">
+            <div class="contactBoxFront">
+              <h2 class="contactName">Michael Campbell</h2>
+              <ul class="contactList">
+                <li class="contactLI">
+                  <a href="https://github.com/Mvcampbell3" target="_blank" class="contackA">
+                    <i class="linksAWE fab fa-github"></i>
+                  </a>
+                </li>
+                <li class="contactLI">
+                  <a href="https://www.linkedin.com/in/mvcampbell3/" target="_blank" class="contackA">
+                    <i class="linksAWE fab fa-linkedin"></i>
+                  </a>
+                </li>
+                <li class="contactLI">
+                  <a href="mailto: mvcampbell3@gmail.com">
+                    <i class="linksAWE marginRight fas fa-envelope-square"></i>mvcampbell3@gmail.com
+                  </a>
+                </li>
+                <li class="contactLI bottomLI">
+                  <button class="leaveMessage" id="leaveBtn">Leave Message</button>
+                </li>
+              </ul>
+            </div>
+            <div class="contactBoxBack">
+              <div class="contactBackWrap">
+                <div class="inputGroup">
+                  <label for="name" class="nameLabel">Name</label>
+                  <input class="inputInfo" type="text" name="name" id="nameInput">
+                </div>
+                <div class="inputGroup">
+                  <label for="email" class="emailLabel">Email</label>
+                  <input class="inputInfo" type="email" name="email" id="emailInput">
+                </div>
+                <div class="inputGroup">
+                  <label for="message">Message</label>
+                  <textarea class="message" name="message" id="messageInput"></textarea>
+                </div>
+
+                <div class="buttonArea">
+                  <button class="leaveMessage" id="subContact">Send</button>
+                  <button class="leaveMessage" id="leaveBtn2">Back</button>
+                </div>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
-
-    <div class="container">
-        <section id="portfolio">
-            <div class="regular">
-                <div id="projectDisplay" class="projectDisplay">
-                    <img src="assets/images/rover.png" alt="" id="displayPic">
-                    <div class="information">
-                        <h3 id="projectName">Rover Reddit</h3>
-                        <p id="projectContent">
-                            My Final Project for the Bootcamp, we made an application which leveraged the Mars Rover
-                            Photos API, which has access to over 500,000 pictures, into a interactive social media hub.
-                            Utilizes the MERN stack.
-                        </p>
-                        <div class="buttonAreaProject">
-                            <a href="https://rover-reddit.herokuapp.com/" target="_blank" class="btnPro"
-                                id="web">Website</a>
-                            <a href="https://github.com/DavidWeid/Space-Pair-Project" target="_blank" class="btnPro"
-                                id="git">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="projectBottom" id="projectPage" data-show="projectDisplay">
-                    <div class="mainProjects">
-                        <div class="projectBox active" data-which="0" data-web="true"
-                            data-carry="assets/images/rovermove.gif">
-                            <h3 class="projectTitle">Rover Reddit</h3>
-                            <img id="Pic1" src="assets/images/rover.png" alt="" class="projectPic">
-                        </div>
-                        <div class="projectBox" data-which="1" data-web="true"
-                            data-carry="assets/images/yahtzeemove.gif">
-                            <h3 class="projectTitle">Yahtzee</h3>
-                            <img id="Pic2" src="assets/images/yahtzee.png" alt="" class="projectPic">
-                        </div>
-                        <div class="projectBox" data-which="2" data-web="true"
-                            data-carry="assets/images/stardewSmall.gif">
-                            <h3 class="projectTitle">Stardew Match Maker</h3>
-                            <img id="Pic3" src="assets/images/stardewPic.png" alt="" class="projectPic">
-                        </div>
-                        <div class="projectBox" data-which="3" data-web="true" data-carry="assets/images/spacemove.gif">
-                            <h3 class="projectTitle">Space Scrape</h3>
-                            <img id="Pic4" src="assets/images/spacescrapestill.png" alt="" class="projectPic">
-                        </div>
-                        <div class="projectBox" data-which="4" data-web="true"
-                            data-carry="assets/images/skyrimmove2.gif">
-                            <h3 class="projectTitle">Skyrim Click Game</h3>
-                            <img id="Pic5" src="assets/images/skyrimstill.png" alt="" class="projectPic">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="notRegular">
-                <div class="mobileWrapper">
-                    <div class="mobileProject">
-                        <h3 class="mobileTitle">Rover Reddit</h3>
-                        <img src="assets/images/rover.png" alt="rock">
-                        <p class="mobileContent">
-                            My Final Project for the Bootcamp, we made an application which leveraged the Mars Rover
-                            Photos API, which has access to over 500,000 pictures, into a interactive social media hub.
-                            Utilizes the MERN stack.
-                        </p>
-                        <div class="mobileButtons">
-                            <a href="https://rover-reddit.herokuapp.com/" target="_blank" class="btnMob"
-                                id="web">Website</a>
-                            <a href="https://github.com/DavidWeid/Space-Pair-Project" target="_blank"
-                                class="btnMob">GitHub</a>
-                        </div>
-                    </div>
-                    <div class="mobileProject">
-                        <h3 class="mobileTitle">Yahtzee</h3>
-                        <img src="assets/images/yahtzee.png" alt="google">
-                        <p class="mobileContent">
-                            This is a React application which allows the user to play Yahztee. This site also tracks the
-                            scores of logged in users. Have fun rolling the dice! Uses MERN stack.
-                        </p>
-                        <div class="mobileButtons">
-                            <a href="https://yahtzee-react.herokuapp.com/" target="_blank" class="btnMob">Website</a>
-                            <a href="https://github.com/Mvcampbell3/YahtzeeReact" target="_blank"
-                                class="btnMob">GitHub</a>
-                        </div>
-                    </div>
-                    <div class="mobileProject">
-                        <h3 class="mobileTitle">Stardew Match Maker</h3>
-                        <img src="assets/images/stardewPic.png" alt="rock">
-                        <p class="mobileContent">
-                            This express app is based on the video game Stardew Valley. You take a survey to see which
-                            player from the game you should marry. Since there is online multiplayer, you will also be
-                            tested against people who have already taken it. Good Luck!
-                        </p>
-                        <div class="mobileButtons">
-                            <a href="https://secret-temple-27121.herokuapp.com/" target="_blank" class="btnMob"
-                                id="web">Website</a>
-                            <a href="https://github.com/Mvcampbell3/friend_finder" target="_blank"
-                                class="btnMob">Github</a>
-                        </div>
-                    </div>
-                    <div class="mobileProject">
-                        <h3 class="mobileTitle">Space Scrape</h3>
-                        <img src="assets/images/spacescrapestill.png" alt="space">
-                        <p class="mobileContent">
-                            This is an express app that scrapes space stories from the website space.com/news. Users can
-                            also comment on the articles. Uses Axios and Cheerio, Express, Node.js, and Handlebars.
-                        </p>
-                        <div class="mobileButtons">
-                            <a href="https://frozen-ravine-29791.herokuapp.com/" target="_blank" class="btnMob"
-                                id="web">Website</a>
-                            <a href="https://github.com/Mvcampbell3/scraper3000" target="_blank"
-                                class="btnMob">Github</a>
-                        </div>
-                    </div>
-                    <div class="mobileProject">
-                        <h3 class="mobileTitle">Skyrim Click Game</h3>
-                        <img src="assets/images/skyrimstill.png" alt="yahtzee">
-                        <p class="mobileContent">
-                            Skyrim Click Game is a React app that tests the players memory. Scores are based on number
-                            of correct guesses made in a row. A player wins the game by correctly clicking on all of the
-                            characters with clicking a duplicate.
-                        </p>
-                        <div class="mobileButtons">
-                            <a href="https://skyrim-clickgame.herokuapp.com/" target="_blank" class="btnMob">Website</a>
-                            <a href="https://github.com/Mvcampbell3/clickgame" target="_blank" class="btnMob">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-
-        </section>
-        <!-------------- End of project page -------------->
-
-        <section id="contact">
-            <div class="wrapper flex">
-                <div class="formArea">
-                    <div class="inputGroup">
-                        <label class="labelContact" for="name">Name</label><br>
-                        <input type="text" name="name" id="nameInput"><br>
-                    </div>
-                    <div class="inputGroup">
-                        <label class="labelContact" for="name">Email</label><br>
-                        <input type="text" name="email" id="emailInput"><br>
-                    </div>
-                    <div class="inputGroup">
-                        <label class="labelContact" for="message">Message</label><br>
-                        <textarea name="message" id="message" cols="" rows=""></textarea>
-                    </div>
-                    <button class="subContact">Send</button>
-                </div>
-                <div class="buttonContact">
-
-                </div>
-                <div class="reachArea">
-                    <h3 class="myName">Michael Campbell</h3>
-                    <div class="linkArea">
-                        <i class="icon fas fa-envelope-square"><span class="wordIcon"> mvcampbell3@gmail.com</span></i>
-                        <a href="https://www.linkedin.com/in/mvcampbell3/"><i class="icon fab fa-linkedin"><span
-                                    class="wordIcon bolder"> LinkedIn</span></i></a>
-                        <a href="https://github.com/Mvcampbell3"><i class="icon fab fa-github-square"><span
-                                    class="wordIcon bolder"> GitHub</span></i></a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <script src="assets/js/clock.js"></script>
-
+  </div>
+  <script src="assets/js/redo.js"></script>
 </body>
 
 </html>

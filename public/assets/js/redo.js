@@ -196,3 +196,45 @@ function getMessage() {
 }
 
 sendBtn.addEventListener("click", getMessage);
+
+const mobileFlipBtns = [].slice.call(document.querySelectorAll(".mobileFlipBtn"));
+console.log(mobileFlipBtns)
+
+mobileFlipBtns.forEach(btn => {
+  btn.addEventListener("click", function() {
+    const sub = this.dataset.sub;
+    console.log(sub)
+    const flipElem = this.dataset.sub === "false" ? this.parentElement.parentElement : this.parentElement.parentElement.parentElement;
+    // console.log(this.parentElement.parentElement);
+    // const flipElem = this.parentElement.parentElement;
+    console.log(flipElem)
+    const flipped = flipElem.dataset.flipped;
+    console.log(flipped);
+    let start = 0;
+    let finish = 180;
+    if (flipped === "false") {
+      console.log("This is not yet flipped");
+    } else {
+      start = 180;
+      finish = 0;
+    }
+
+    const flipAnimation = flipElem.animate([
+      {transform: `rotateY(${start}deg)`},
+      {transform: `rotateY(${finish}deg)`}
+    ], {
+      duration: 500,
+      fill: 'forwards'
+    })
+
+    flipAnimation.onfinish = function() {
+      console.log("animation finished")
+      console.log(flipElem.dataset.flipped)
+      if (flipElem.dataset.flipped === "false") {
+        flipElem.dataset.flipped = "true"
+      } else {
+        flipElem.dataset.flipped = "false";
+      }
+    }
+  })
+})
