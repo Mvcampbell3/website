@@ -10,46 +10,54 @@ leftMover.addEventListener("touchstart", moveRight);
 rightMover.addEventListener("click", moveLeft);
 rightMover.addEventListener("touchstart", moveLeft);
 
+const contentBoxes = document.querySelectorAll(".content")
+
 function moveLeft() {
-  if (!running) {
-    console.log(pos)
-    running = true;
-    const leftAnimate = projectHolder.animate([
-      { transform: `translateX(${pos * -350}px)` },
-      { transform: `translateX(${(pos + 1) * -350}px)` }
-    ], {
+  if (pos < contentBoxes.length - 1) {
+    if (!running) {
+      console.log(pos)
+      running = true;
+      const leftAnimate = projectHolder.animate([
+        { transform: `translateX(${pos * -350}px)` },
+        { transform: `translateX(${(pos + 1) * -350}px)` }
+      ], {
         duration: 333,
         fill: "forwards",
         easing: "ease-out"
       })
 
-    leftAnimate.onfinish = function() {
-      console.log("this is over")
-      pos++;
-      running = false;
+      leftAnimate.onfinish = function() {
+        console.log("this is over")
+        pos++;
+        running = false;
+      }
     }
   }
+
 }
 
 function moveRight() {
-  if (!running) {
-    console.log(pos)
-    running = true;
-    const rightAnimate = projectHolder.animate([
-      { transform: `translateX(${pos * -350}px)` },
-      { transform: `translateX(${(pos - 1) * -350}px)` }
-    ], {
+  if (pos >= 1) {
+    if (!running) {
+      console.log(pos)
+      running = true;
+      const rightAnimate = projectHolder.animate([
+        { transform: `translateX(${pos * -350}px)` },
+        { transform: `translateX(${(pos - 1) * -350}px)` }
+      ], {
         duration: 333,
         fill: "forwards",
         easing: "ease-out"
       })
 
-    rightAnimate.onfinish = function() {
-      console.log("this is over")
-      pos--;
-      running = false;
+      rightAnimate.onfinish = function() {
+        console.log("this is over")
+        pos--;
+        running = false;
+      }
     }
   }
+
 
 }
 
@@ -123,10 +131,10 @@ function transitionPages(currentPage, nextPage) {
       { transform: 'translate(300px, 1000px) rotateZ(-60deg)' },
       { transform: 'translate(0px, 0px) rotateZ(0deg)' }
     ], {
-        duration: 800,
-        fill: "forwards",
-        easing: "cubic-bezier(0.175, 0.885, 0.32, 1.175)"
-      });
+      duration: 800,
+      fill: "forwards",
+      easing: "cubic-bezier(0.175, 0.885, 0.32, 1.175)"
+    });
 
     secondAnimation.onfinish = endSecondAnimate(nextPage)
   };
@@ -147,9 +155,9 @@ function flipContact() {
     { transform: 'rotateY(0deg)' },
     { transform: 'rotateY(180deg)' }
   ], {
-      duration: 500,
-      fill: "forwards"
-    })
+    duration: 500,
+    fill: "forwards"
+  })
 }
 
 function flipContact2() {
@@ -158,9 +166,9 @@ function flipContact2() {
     { transform: 'rotateY(180deg)' },
     { transform: 'rotateY(0deg)' }
   ], {
-      duration: 500,
-      fill: "forwards"
-    })
+    duration: 500,
+    fill: "forwards"
+  })
 }
 
 leaveBtn.addEventListener("click", flipContact)
@@ -238,9 +246,9 @@ function handleMobileFlip() {
     transform: [`rotateY(${start}deg)`, `rotateY(${finish}deg)`],
     boxShadow: [shadowStart, shadowFinish]
   }, {
-      duration: 500,
-      fill: 'forwards'
-    })
+    duration: 500,
+    fill: 'forwards'
+  })
 
   flipAnimation.onfinish = function() {
     console.log("animation finished")

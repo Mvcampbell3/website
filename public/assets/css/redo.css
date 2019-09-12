@@ -255,7 +255,7 @@ body{
 .projectHolder{
   display: flex;
   position: relative;
-  width: 1700px;
+  width: 2050px;
   justify-content: space-between;
 }
 
@@ -616,5 +616,9 @@ body{
   .content:hover .contentBox{
     transform: none;
     box-shadow: 15px 15px 15px #333;
+  }
+
+  .content{
+    transform: scale(.80);
   }
 }
